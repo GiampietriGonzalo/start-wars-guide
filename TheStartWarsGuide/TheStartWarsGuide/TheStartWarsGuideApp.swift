@@ -11,7 +11,7 @@ import SwiftUI
 struct TheStartWarsGuideApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            CharacterListSceneCoordinator().start()
         }
     }
 }
