@@ -22,7 +22,6 @@ struct CharacterListView: View {
                             didEndFirstLoad = true
                         }
                     } else {
-                        Spacer(minLength: 16)
                         List {
                             ForEach(viewModel.characters) { character in
                                 CellWithImage(text: character.name, imageName: character.name)
