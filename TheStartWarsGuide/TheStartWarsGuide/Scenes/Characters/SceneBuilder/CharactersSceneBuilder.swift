@@ -41,7 +41,8 @@ private extension CharactersSceneBuilder {
         configuration.waitsForConnectivity = true
         configuration.timeoutIntervalForRequest = 60
         configuration.timeoutIntervalForResource = 60 * 5
+        let networkingClient = NetworkingRestClient(sessionConfiguration: configuration)
         
-        return CharacterListRepository(sessionConfiguration: configuration)
+        return CharacterListRepository(networkingClient: networkingClient)
     }
 }
