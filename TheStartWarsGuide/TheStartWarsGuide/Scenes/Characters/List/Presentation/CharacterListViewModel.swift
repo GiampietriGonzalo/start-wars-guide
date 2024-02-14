@@ -8,19 +8,22 @@
 import Observation
 
 @Observable
-final class CharacterListViewModel {
+final class CharacterListViewModel: CharacterListViewModelProtocol {
+    
     private let fetchAllCharactersUseCase: FetchAllCharactersUseCaseProtocol
     var isLoading = false
-    var characters: [CharacterModel] = []
+    var characters: [CharacterListViewData]
     
     init(fetchAllCharactersUseCase: FetchAllCharactersUseCaseProtocol) {
         self.fetchAllCharactersUseCase = fetchAllCharactersUseCase
+        self.characters = []
     }
     
-    @MainActor func loadContent() async {
+    func loadContent() async {
         isLoading = true
         do {
-            characters = try await fetchAllCharactersUseCase.execute()
+            async let charactersModel = fetchAllCharactersUseCase.execute()
+            characters = try await charactersModel.map{ CharacterListViewData(from: $0) }
             isLoading = false
         } catch let error as CustomError {
             isLoading = false

@@ -1,11 +1,11 @@
 //
-//  CharactersHomeConstants.swift
+//  CharacterListConstants.swift
 //  TheStartWarsGuide
 //
 //  Created by Gonzalo.Giampietri on 09/02/2024.
 //
 
-struct CharactersHomeConstants {
+struct CharacterListConstants {
     static let title = "Characters"
     static let loading = "Loading..."
 }
