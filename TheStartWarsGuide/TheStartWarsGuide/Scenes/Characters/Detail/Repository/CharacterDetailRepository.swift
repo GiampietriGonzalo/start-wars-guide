@@ -22,4 +22,20 @@ struct CharacterDetailRepository: CharacterDetailRepositoryProtocol {
         
         return try await networkingClient.fetch(from: url)
     }
+    
+    func fetchShip(from url: String) async throws -> VehicleModel {
+        guard let url = URL(string: url) else {
+            throw CustomError.invalidUrl
+        }
+        
+        return try await networkingClient.fetch(from: url)
+    }
+    
+    func fetchFilm(from url: String) async throws -> FilmModel {
+        guard let url = URL(string: url) else {
+            throw CustomError.invalidUrl
+        }
+        
+        return try await networkingClient.fetch(from: url)
+    }
 }

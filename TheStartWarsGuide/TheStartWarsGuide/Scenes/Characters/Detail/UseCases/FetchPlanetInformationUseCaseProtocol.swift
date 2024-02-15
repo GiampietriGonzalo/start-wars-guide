@@ -6,5 +6,5 @@
 //
 
 protocol FetchPlanetInformationUseCaseProtocol {
-    func execute() async throws -> PlanetModel
+    func execute(with url: String) async throws -> PlanetModel
 }

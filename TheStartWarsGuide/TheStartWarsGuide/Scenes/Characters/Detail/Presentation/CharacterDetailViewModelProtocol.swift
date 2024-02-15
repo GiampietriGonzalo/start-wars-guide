@@ -6,5 +6,5 @@
 //
 
 protocol CharacterDetailViewModelProtocol {
-    
+    func loadContent() async
 }

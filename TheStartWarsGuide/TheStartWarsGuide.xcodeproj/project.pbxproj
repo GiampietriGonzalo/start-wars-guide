@@ -35,17 +35,22 @@
 		7A50C8012B7D3119003B7A64 /* CharacterDetailViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A50C8002B7D3119003B7A64 /* CharacterDetailViewModelProtocol.swift */; };
 		7A50C8032B7D3129003B7A64 /* CharacterDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A50C8022B7D3129003B7A64 /* CharacterDetailViewModel.swift */; };
 		7A50C8052B7D3BBC003B7A64 /* FetchPlanetInformationUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A50C8042B7D3BBC003B7A64 /* FetchPlanetInformationUseCaseProtocol.swift */; };
-		7A50C8072B7D3D5E003B7A64 /* FetchVehiclesInformationUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A50C8062B7D3D5E003B7A64 /* FetchVehiclesInformationUseCaseProtocol.swift */; };
-		7A50C8092B7D3D77003B7A64 /* FetchStarshipsInformationUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A50C8082B7D3D77003B7A64 /* FetchStarshipsInformationUseCaseProtocol.swift */; };
+		7A50C8092B7D3D77003B7A64 /* FetchVehiclesUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A50C8082B7D3D77003B7A64 /* FetchVehiclesUseCaseProtocol.swift */; };
 		7A50C80B2B7D3DA5003B7A64 /* CharacterDetailRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A50C80A2B7D3DA5003B7A64 /* CharacterDetailRepositoryProtocol.swift */; };
 		7A50C80D2B7D3DB5003B7A64 /* CharacterDetailRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A50C80C2B7D3DB5003B7A64 /* CharacterDetailRepository.swift */; };
 		7A50C80F2B7D3E5A003B7A64 /* PlanetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A50C80E2B7D3E5A003B7A64 /* PlanetModel.swift */; };
-		7A50C8112B7D3F4D003B7A64 /* ShipModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A50C8102B7D3F4D003B7A64 /* ShipModel.swift */; };
+		7A50C8112B7D3F4D003B7A64 /* VehicleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A50C8102B7D3F4D003B7A64 /* VehicleModel.swift */; };
 		7A50C8132B7D42AC003B7A64 /* FilmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A50C8122B7D42AC003B7A64 /* FilmModel.swift */; };
 		7A50C8152B7D4314003B7A64 /* FetchFilmsUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A50C8142B7D4314003B7A64 /* FetchFilmsUseCaseProtocol.swift */; };
 		7A50C8172B7D43E9003B7A64 /* FetchPlanetInformationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A50C8162B7D43E9003B7A64 /* FetchPlanetInformationUseCase.swift */; };
 		7A50C81A2B7D45DD003B7A64 /* NetworkingClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A50C8192B7D45DD003B7A64 /* NetworkingClientProtocol.swift */; };
 		7A50C81E2B7D46E4003B7A64 /* NetworkingRestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A50C81D2B7D46E4003B7A64 /* NetworkingRestClient.swift */; };
+		7A50C8202B7D4AE2003B7A64 /* FetchVehiclesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A50C81F2B7D4AE2003B7A64 /* FetchVehiclesUseCase.swift */; };
+		7A50C8222B7D86D7003B7A64 /* FetchFilmsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A50C8212B7D86D7003B7A64 /* FetchFilmsUseCase.swift */; };
+		7A50C8242B7D89FE003B7A64 /* CharacterDetailViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A50C8232B7D89FE003B7A64 /* CharacterDetailViewData.swift */; };
+		7A50C8262B7D8A25003B7A64 /* FilmViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A50C8252B7D8A25003B7A64 /* FilmViewData.swift */; };
+		7A50C8282B7D8A41003B7A64 /* VehicleViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A50C8272B7D8A41003B7A64 /* VehicleViewData.swift */; };
+		7A50C82A2B7D8A48003B7A64 /* PlanetViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A50C8292B7D8A48003B7A64 /* PlanetViewData.swift */; };
 		7AD572732B7B096000492A14 /* CharacterListViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD572722B7B096000492A14 /* CharacterListViewModelProtocol.swift */; };
 		7AD572752B7C5AFE00492A14 /* NavigationTypeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD572742B7C5AFE00492A14 /* NavigationTypeProtocols.swift */; };
 /* End PBXBuildFile section */
@@ -99,17 +104,22 @@
 		7A50C8002B7D3119003B7A64 /* CharacterDetailViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewModelProtocol.swift; sourceTree = "<group>"; };
 		7A50C8022B7D3129003B7A64 /* CharacterDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewModel.swift; sourceTree = "<group>"; };
 		7A50C8042B7D3BBC003B7A64 /* FetchPlanetInformationUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchPlanetInformationUseCaseProtocol.swift; sourceTree = "<group>"; };
-		7A50C8062B7D3D5E003B7A64 /* FetchVehiclesInformationUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchVehiclesInformationUseCaseProtocol.swift; sourceTree = "<group>"; };
-		7A50C8082B7D3D77003B7A64 /* FetchStarshipsInformationUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchStarshipsInformationUseCaseProtocol.swift; sourceTree = "<group>"; };
+		7A50C8082B7D3D77003B7A64 /* FetchVehiclesUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchVehiclesUseCaseProtocol.swift; sourceTree = "<group>"; };
 		7A50C80A2B7D3DA5003B7A64 /* CharacterDetailRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailRepositoryProtocol.swift; sourceTree = "<group>"; };
 		7A50C80C2B7D3DB5003B7A64 /* CharacterDetailRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailRepository.swift; sourceTree = "<group>"; };
 		7A50C80E2B7D3E5A003B7A64 /* PlanetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetModel.swift; sourceTree = "<group>"; };
-		7A50C8102B7D3F4D003B7A64 /* ShipModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipModel.swift; sourceTree = "<group>"; };
+		7A50C8102B7D3F4D003B7A64 /* VehicleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleModel.swift; sourceTree = "<group>"; };
 		7A50C8122B7D42AC003B7A64 /* FilmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmModel.swift; sourceTree = "<group>"; };
 		7A50C8142B7D4314003B7A64 /* FetchFilmsUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchFilmsUseCaseProtocol.swift; sourceTree = "<group>"; };
 		7A50C8162B7D43E9003B7A64 /* FetchPlanetInformationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchPlanetInformationUseCase.swift; sourceTree = "<group>"; };
 		7A50C8192B7D45DD003B7A64 /* NetworkingClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingClientProtocol.swift; sourceTree = "<group>"; };
 		7A50C81D2B7D46E4003B7A64 /* NetworkingRestClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingRestClient.swift; sourceTree = "<group>"; };
+		7A50C81F2B7D4AE2003B7A64 /* FetchVehiclesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchVehiclesUseCase.swift; sourceTree = "<group>"; };
+		7A50C8212B7D86D7003B7A64 /* FetchFilmsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchFilmsUseCase.swift; sourceTree = "<group>"; };
+		7A50C8232B7D89FE003B7A64 /* CharacterDetailViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewData.swift; sourceTree = "<group>"; };
+		7A50C8252B7D8A25003B7A64 /* FilmViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmViewData.swift; sourceTree = "<group>"; };
+		7A50C8272B7D8A41003B7A64 /* VehicleViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleViewData.swift; sourceTree = "<group>"; };
+		7A50C8292B7D8A48003B7A64 /* PlanetViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetViewData.swift; sourceTree = "<group>"; };
 		7AD572722B7B096000492A14 /* CharacterListViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListViewModelProtocol.swift; sourceTree = "<group>"; };
 		7AD572742B7C5AFE00492A14 /* NavigationTypeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTypeProtocols.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -343,6 +353,10 @@
 			isa = PBXGroup;
 			children = (
 				7A01FB612B7A70CC00A813A5 /* CharacterDetailView.swift */,
+				7A50C8232B7D89FE003B7A64 /* CharacterDetailViewData.swift */,
+				7A50C8292B7D8A48003B7A64 /* PlanetViewData.swift */,
+				7A50C8272B7D8A41003B7A64 /* VehicleViewData.swift */,
+				7A50C8252B7D8A25003B7A64 /* FilmViewData.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -351,7 +365,7 @@
 			isa = PBXGroup;
 			children = (
 				7A50C80E2B7D3E5A003B7A64 /* PlanetModel.swift */,
-				7A50C8102B7D3F4D003B7A64 /* ShipModel.swift */,
+				7A50C8102B7D3F4D003B7A64 /* VehicleModel.swift */,
 				7A50C8122B7D42AC003B7A64 /* FilmModel.swift */,
 				7A50C8002B7D3119003B7A64 /* CharacterDetailViewModelProtocol.swift */,
 				7A50C8022B7D3129003B7A64 /* CharacterDetailViewModel.swift */,
@@ -363,10 +377,11 @@
 			isa = PBXGroup;
 			children = (
 				7A50C8042B7D3BBC003B7A64 /* FetchPlanetInformationUseCaseProtocol.swift */,
-				7A50C8062B7D3D5E003B7A64 /* FetchVehiclesInformationUseCaseProtocol.swift */,
-				7A50C8082B7D3D77003B7A64 /* FetchStarshipsInformationUseCaseProtocol.swift */,
+				7A50C8082B7D3D77003B7A64 /* FetchVehiclesUseCaseProtocol.swift */,
 				7A50C8142B7D4314003B7A64 /* FetchFilmsUseCaseProtocol.swift */,
 				7A50C8162B7D43E9003B7A64 /* FetchPlanetInformationUseCase.swift */,
+				7A50C81F2B7D4AE2003B7A64 /* FetchVehiclesUseCase.swift */,
+				7A50C8212B7D86D7003B7A64 /* FetchFilmsUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -522,7 +537,7 @@
 				7A01FB4A2B76B33000A813A5 /* FetchAllCharactersUseCaseProtocol.swift in Sources */,
 				7A01FB522B76B55E00A813A5 /* CharacterModel.swift in Sources */,
 				7A01FB6E2B7AE07B00A813A5 /* CharactersScenePushNavigationType.swift in Sources */,
-				7A50C8092B7D3D77003B7A64 /* FetchStarshipsInformationUseCaseProtocol.swift in Sources */,
+				7A50C8092B7D3D77003B7A64 /* FetchVehiclesUseCaseProtocol.swift in Sources */,
 				7A01FB5A2B76F70C00A813A5 /* CustomError.swift in Sources */,
 				7A01FB642B7ADEF600A813A5 /* CharactersSceneCoordinatorView.swift in Sources */,
 				7A01FB602B79995800A813A5 /* CharacterListViewData.swift in Sources */,
@@ -532,11 +547,15 @@
 				7A01FB482B76B2FA00A813A5 /* CharacterListViewModel.swift in Sources */,
 				7A01FB5C2B77D58900A813A5 /* CharactersSceneBuilder.swift in Sources */,
 				7A01FB542B76F3AE00A813A5 /* CharacterListDTO.swift in Sources */,
+				7A50C8242B7D89FE003B7A64 /* CharacterDetailViewData.swift in Sources */,
 				7A092B342B76673200CE50CD /* CharacterListView.swift in Sources */,
+				7A50C8262B7D8A25003B7A64 /* FilmViewData.swift in Sources */,
 				7A50C8012B7D3119003B7A64 /* CharacterDetailViewModelProtocol.swift in Sources */,
 				7A01FB4E2B76B4C900A813A5 /* CharacterListRepositoryProtocol.swift in Sources */,
+				7A50C8202B7D4AE2003B7A64 /* FetchVehiclesUseCase.swift in Sources */,
+				7A50C8222B7D86D7003B7A64 /* FetchFilmsUseCase.swift in Sources */,
 				7AD572732B7B096000492A14 /* CharacterListViewModelProtocol.swift in Sources */,
-				7A50C8112B7D3F4D003B7A64 /* ShipModel.swift in Sources */,
+				7A50C8112B7D3F4D003B7A64 /* VehicleModel.swift in Sources */,
 				7A50C81E2B7D46E4003B7A64 /* NetworkingRestClient.swift in Sources */,
 				7A01FB662B7ADF0400A813A5 /* CharactersSceneCoordinatorViewModel.swift in Sources */,
 				7A092AF42B765B1900CE50CD /* TheStartWarsGuideApp.swift in Sources */,
@@ -552,8 +571,9 @@
 				7A50C8152B7D4314003B7A64 /* FetchFilmsUseCaseProtocol.swift in Sources */,
 				7A01FB502B76B4D000A813A5 /* CharacterListRepository.swift in Sources */,
 				7A50C8032B7D3129003B7A64 /* CharacterDetailViewModel.swift in Sources */,
+				7A50C82A2B7D8A48003B7A64 /* PlanetViewData.swift in Sources */,
+				7A50C8282B7D8A41003B7A64 /* VehicleViewData.swift in Sources */,
 				7A01FB572B76F6B300A813A5 /* CharacterListConstants.swift in Sources */,
-				7A50C8072B7D3D5E003B7A64 /* FetchVehiclesInformationUseCaseProtocol.swift in Sources */,
 				7A01FB442B766D3800A813A5 /* CellWithImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

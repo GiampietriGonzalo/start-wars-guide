@@ -6,5 +6,5 @@
 //
 
 protocol FetchFilmsUseCaseProtocol {
-    func execute() async throws -> [FilmModel]
+    func execute(with urls: [String]) async throws -> [FilmModel]
 }
