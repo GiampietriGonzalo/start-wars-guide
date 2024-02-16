@@ -15,6 +15,8 @@ struct CharacterDetailVerticalItemView: View {
             Label(item.title, systemImage: item.image ?? "")
             Spacer()
             Text(item.description)
+                .multilineTextAlignment(.trailing)
+                
         }
     }
 }

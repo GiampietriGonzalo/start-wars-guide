@@ -22,21 +22,7 @@ struct CharacterListView<Coordinator: CharactersSceneCoordinatorViewModelProtoco
                     didEndFirstLoad = true
                 }
             } else {
-                List {
-                    ForEach(viewModel.characters) { character in
-                        CellWithImage(text: character.name, imageName: character.name)
-                            .overlay {
-                                Button("") {
-                                    coordinator.push(.detail(character: viewModel.getModel(of: character.name)))
-                                }
-                                .opacity(0)
-                            }
-                    }
-                }
-                .listRowSeparator(.hidden)
-                .scrollIndicators(.hidden)
-                .listRowSpacing(8)
-                .refreshable { await viewModel.loadContent() }
+                CharacterListBodyView(viewModel: viewModel, coordinator: coordinator)
             }
         }
         .navigationTitle(CharacterListConstants.title)
@@ -46,7 +32,34 @@ struct CharacterListView<Coordinator: CharactersSceneCoordinatorViewModelProtoco
     }
 }
 
+fileprivate struct CharacterListBodyView<Coordinator: CharactersSceneCoordinatorViewModelProtocol>: View {
+    var viewModel: CharacterListViewModelProtocol
+    var coordinator: Coordinator
+    
+    var body: some View {
+        List {
+            ForEach(viewModel.characters) { character in
+                HStack {
+                    CellWithImage(text: character.name, imageName: character.name)
+                        .overlay {
+                            Button("") {
+                                coordinator.push(.detail(character: viewModel.getModel(of: character.name)))
+                            }
+                            .opacity(0)
+                    }
+                    Image(systemName: ImageConstant.forwardButtoImage)
+                }
+            }
+        }
+        .listRowSeparator(.hidden)
+        .scrollIndicators(.hidden)
+        .listRowSpacing(8)
+        .refreshable { await viewModel.loadContent() }
+    }
+}
+
 #Preview {
-    CharactersSceneBuilder.shared.buildListView()
-        .preferredColorScheme(.dark)
+    NavigationStack {
+        CharactersSceneBuilder.shared.buildListView()
+    }
 }

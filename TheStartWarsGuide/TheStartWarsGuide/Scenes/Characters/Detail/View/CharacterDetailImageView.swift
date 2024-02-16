@@ -12,16 +12,16 @@ struct CharacterDetailImageView: View {
     let characterImageName: String
     
     var body: some View {
-        Image(characterImageName)
-            .resizable()
-            .aspectRatio(contentMode: .fill)
-            .background(.black)
-            .border(.black, width: 4)
-            .frame(width: 100, height: 100, alignment: .center)
-            .clipShape(.circle)
+        VStack {
+            Spacer()
+            Image(characterImageName)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .clipShape(.circle)
+        }
     }
 }
 
 #Preview {
-    CharacterDetailImageView(characterImageName: "Darth Vader")
+    CharacterDetailImageView(characterImageName: "Luke Skywalker")
 }

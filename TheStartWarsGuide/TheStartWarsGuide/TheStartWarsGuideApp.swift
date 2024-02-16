@@ -12,6 +12,7 @@ struct TheStartWarsGuideApp: App {
     var body: some Scene {
         WindowGroup {
             CharactersSceneCoordinatorView(viewModel: CharactersSceneCoordinatorViewModel.shared)
+                .preferredColorScheme(.dark)
         }
     }
 }

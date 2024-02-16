@@ -21,6 +21,7 @@ struct VerticalSectionsView: View {
                 .headerProminence(.increased)
             }
             .listStyle(.insetGrouped)
+            .background(.clear)
         }
     }
 }
