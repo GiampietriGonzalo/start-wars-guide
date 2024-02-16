@@ -8,9 +8,6 @@
 struct VehicleModel: Decodable {
     let name: String
     let model: String
-    let terrain: String
-    let gravity: String
-    let population: String
     var vehicleClass: String?
     var starshipClass: String?
 }

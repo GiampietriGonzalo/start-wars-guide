@@ -17,6 +17,7 @@ struct CharacterListView<Coordinator: CharactersSceneCoordinatorViewModelProtoco
             if viewModel.isLoading, !didEndFirstLoad {
                 ProgressView() {
                     Text(CharacterListConstants.loading)
+                        .font(.title3)
                 }.onDisappear() {
                     didEndFirstLoad = true
                 }
@@ -26,7 +27,7 @@ struct CharacterListView<Coordinator: CharactersSceneCoordinatorViewModelProtoco
                         CellWithImage(text: character.name, imageName: character.name)
                             .overlay {
                                 Button("") {
-                                    coordinator.push(.detail)
+                                    coordinator.push(.detail(character: viewModel.getModel(of: character.name)))
                                 }
                                 .opacity(0)
                             }

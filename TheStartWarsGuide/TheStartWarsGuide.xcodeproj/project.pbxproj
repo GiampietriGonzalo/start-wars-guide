@@ -51,6 +51,12 @@
 		7A50C8262B7D8A25003B7A64 /* FilmViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A50C8252B7D8A25003B7A64 /* FilmViewData.swift */; };
 		7A50C8282B7D8A41003B7A64 /* VehicleViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A50C8272B7D8A41003B7A64 /* VehicleViewData.swift */; };
 		7A50C82A2B7D8A48003B7A64 /* PlanetViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A50C8292B7D8A48003B7A64 /* PlanetViewData.swift */; };
+		7A50C82E2B7E4F54003B7A64 /* CharactersSceneBuilderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A50C82D2B7E4F54003B7A64 /* CharactersSceneBuilderProtocol.swift */; };
+		7A50C8302B7E5C14003B7A64 /* CharacterDetailConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A50C82F2B7E5C14003B7A64 /* CharacterDetailConstants.swift */; };
+		7A50C8322B7EA030003B7A64 /* CharacterDetailVerticalItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A50C8312B7EA030003B7A64 /* CharacterDetailVerticalItemView.swift */; };
+		7A50C8342B7F8E13003B7A64 /* VerticalSectionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A50C8332B7F8E12003B7A64 /* VerticalSectionsView.swift */; };
+		7A50C8362B7F8FB2003B7A64 /* CharacterDetailImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A50C8352B7F8FB2003B7A64 /* CharacterDetailImageView.swift */; };
+		7A50C8392B7F921D003B7A64 /* ImageConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A50C8382B7F921D003B7A64 /* ImageConstant.swift */; };
 		7AD572732B7B096000492A14 /* CharacterListViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD572722B7B096000492A14 /* CharacterListViewModelProtocol.swift */; };
 		7AD572752B7C5AFE00492A14 /* NavigationTypeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD572742B7C5AFE00492A14 /* NavigationTypeProtocols.swift */; };
 /* End PBXBuildFile section */
@@ -120,6 +126,12 @@
 		7A50C8252B7D8A25003B7A64 /* FilmViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmViewData.swift; sourceTree = "<group>"; };
 		7A50C8272B7D8A41003B7A64 /* VehicleViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleViewData.swift; sourceTree = "<group>"; };
 		7A50C8292B7D8A48003B7A64 /* PlanetViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetViewData.swift; sourceTree = "<group>"; };
+		7A50C82D2B7E4F54003B7A64 /* CharactersSceneBuilderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersSceneBuilderProtocol.swift; sourceTree = "<group>"; };
+		7A50C82F2B7E5C14003B7A64 /* CharacterDetailConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailConstants.swift; sourceTree = "<group>"; };
+		7A50C8312B7EA030003B7A64 /* CharacterDetailVerticalItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailVerticalItemView.swift; sourceTree = "<group>"; };
+		7A50C8332B7F8E12003B7A64 /* VerticalSectionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalSectionsView.swift; sourceTree = "<group>"; };
+		7A50C8352B7F8FB2003B7A64 /* CharacterDetailImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailImageView.swift; sourceTree = "<group>"; };
+		7A50C8382B7F921D003B7A64 /* ImageConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageConstant.swift; sourceTree = "<group>"; };
 		7AD572722B7B096000492A14 /* CharacterListViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListViewModelProtocol.swift; sourceTree = "<group>"; };
 		7AD572742B7C5AFE00492A14 /* NavigationTypeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTypeProtocols.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -165,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				7A01FB432B766D3700A813A5 /* CellWithImage.swift */,
+				7A50C8332B7F8E12003B7A64 /* VerticalSectionsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -173,6 +186,8 @@
 			isa = PBXGroup;
 			children = (
 				7A01FB562B76F6B300A813A5 /* CharacterListConstants.swift */,
+				7A50C82F2B7E5C14003B7A64 /* CharacterDetailConstants.swift */,
+				7A50C8382B7F921D003B7A64 /* ImageConstant.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -307,6 +322,7 @@
 			isa = PBXGroup;
 			children = (
 				7A01FB5B2B77D58800A813A5 /* CharactersSceneBuilder.swift */,
+				7A50C82D2B7E4F54003B7A64 /* CharactersSceneBuilderProtocol.swift */,
 			);
 			path = SceneBuilder;
 			sourceTree = "<group>";
@@ -357,6 +373,8 @@
 				7A50C8292B7D8A48003B7A64 /* PlanetViewData.swift */,
 				7A50C8272B7D8A41003B7A64 /* VehicleViewData.swift */,
 				7A50C8252B7D8A25003B7A64 /* FilmViewData.swift */,
+				7A50C8312B7EA030003B7A64 /* CharacterDetailVerticalItemView.swift */,
+				7A50C8352B7F8FB2003B7A64 /* CharacterDetailImageView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -543,10 +561,13 @@
 				7A01FB602B79995800A813A5 /* CharacterListViewData.swift in Sources */,
 				7A01FB622B7A70CC00A813A5 /* CharacterDetailView.swift in Sources */,
 				7A50C81A2B7D45DD003B7A64 /* NetworkingClientProtocol.swift in Sources */,
+				7A50C8322B7EA030003B7A64 /* CharacterDetailVerticalItemView.swift in Sources */,
 				7A50C80B2B7D3DA5003B7A64 /* CharacterDetailRepositoryProtocol.swift in Sources */,
 				7A01FB482B76B2FA00A813A5 /* CharacterListViewModel.swift in Sources */,
+				7A50C8302B7E5C14003B7A64 /* CharacterDetailConstants.swift in Sources */,
 				7A01FB5C2B77D58900A813A5 /* CharactersSceneBuilder.swift in Sources */,
 				7A01FB542B76F3AE00A813A5 /* CharacterListDTO.swift in Sources */,
+				7A50C8362B7F8FB2003B7A64 /* CharacterDetailImageView.swift in Sources */,
 				7A50C8242B7D89FE003B7A64 /* CharacterDetailViewData.swift in Sources */,
 				7A092B342B76673200CE50CD /* CharacterListView.swift in Sources */,
 				7A50C8262B7D8A25003B7A64 /* FilmViewData.swift in Sources */,
@@ -559,11 +580,14 @@
 				7A50C81E2B7D46E4003B7A64 /* NetworkingRestClient.swift in Sources */,
 				7A01FB662B7ADF0400A813A5 /* CharactersSceneCoordinatorViewModel.swift in Sources */,
 				7A092AF42B765B1900CE50CD /* TheStartWarsGuideApp.swift in Sources */,
+				7A50C8392B7F921D003B7A64 /* ImageConstant.swift in Sources */,
 				7A01FB702B7AFE7500A813A5 /* CoordinatorProtocol.swift in Sources */,
 				7A50C80F2B7D3E5A003B7A64 /* PlanetModel.swift in Sources */,
 				7A01FB4C2B76B33E00A813A5 /* FetchAllCharactersUseCase.swift in Sources */,
 				7AD572752B7C5AFE00492A14 /* NavigationTypeProtocols.swift in Sources */,
+				7A50C8342B7F8E13003B7A64 /* VerticalSectionsView.swift in Sources */,
 				7A50C8132B7D42AC003B7A64 /* FilmModel.swift in Sources */,
+				7A50C82E2B7E4F54003B7A64 /* CharactersSceneBuilderProtocol.swift in Sources */,
 				7A50C8052B7D3BBC003B7A64 /* FetchPlanetInformationUseCaseProtocol.swift in Sources */,
 				7A50C8172B7D43E9003B7A64 /* FetchPlanetInformationUseCase.swift in Sources */,
 				7A01FB6C2B7ADFCD00A813A5 /* CharactersSceneCoordinatorViewModelProtocol.swift in Sources */,

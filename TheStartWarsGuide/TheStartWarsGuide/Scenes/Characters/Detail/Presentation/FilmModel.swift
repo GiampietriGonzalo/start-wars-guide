@@ -6,7 +6,7 @@
 //
 
 struct FilmModel: Decodable {
-    let name: String
-    let episodeId: String
+    let title: String
+    let episodeId: Int
     let releaseDate: String
 }

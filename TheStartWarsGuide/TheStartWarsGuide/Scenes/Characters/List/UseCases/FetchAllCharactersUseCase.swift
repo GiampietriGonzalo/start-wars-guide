@@ -32,7 +32,7 @@ final class FetchAllCharactersUseCase: FetchAllCharactersUseCaseProtocol {
         try await withThrowingTaskGroup(of: (Int, [CharacterModel]).self) { [weak self] group in
             guard let self else { throw CustomError.unknown }
             
-            for pageNumber in 1...remainingCalls {
+            for pageNumber in 2...remainingCalls {
                 group.addTask {
                     async let pageCharacters = self.repository.fetch(pageNumber: pageNumber).results.map { CharacterModel(from: $0) }
                     return (pageNumber, try await pageCharacters)

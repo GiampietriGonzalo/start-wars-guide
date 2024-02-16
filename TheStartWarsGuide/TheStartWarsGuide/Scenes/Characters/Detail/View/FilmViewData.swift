@@ -5,14 +5,18 @@
 //  Created by Gonzalo.Giampietri on 14/02/2024.
 //
 
-struct FilmViewData {
+import Foundation
+
+struct FilmViewData: Identifiable {
+    let id: UUID
     let name: String
-    let episodeId: String
+    let episodeId: Int
     let releaseDate: String
     
     init(from model: FilmModel) {
-        self.name = model.name
+        self.id = .init()
+        self.name = model.title
         self.episodeId = model.episodeId
-        self.releaseDate = model.episodeId //TODO: Format date
+        self.releaseDate = model.releaseDate //TODO: Format date
     }
 }

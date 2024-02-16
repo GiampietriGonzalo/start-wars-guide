@@ -48,9 +48,9 @@ final class CharactersSceneCoordinatorViewModel: CharactersSceneCoordinatorViewM
         switch item {
         case .list:
             CharactersSceneBuilder.shared.buildListView()
-        case .detail:
+        case .detail(let character):
             //TODO: Inject dependencies. Declare it in PushItem enum
-            CharactersSceneBuilder.shared.buildCharacterDetailView()
+            CharactersSceneBuilder.shared.buildCharacterDetailView(for: character)
         }
     }
 }

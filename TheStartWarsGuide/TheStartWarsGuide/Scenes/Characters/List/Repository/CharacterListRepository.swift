@@ -11,7 +11,8 @@ struct CharacterListRepository: CharacterListRepositoryProtocol {
     private let url: String
     private let networkingClient: NetworkingClientProtocol
     
-    init(url: String = "https://swapi.dev/api/people/?page=", networkingClient: NetworkingClientProtocol) {
+    init(url: String = "https://swapi.dev/api/people/?page=",
+         networkingClient: NetworkingClientProtocol) {
         self.url = url
         self.networkingClient = networkingClient
     }

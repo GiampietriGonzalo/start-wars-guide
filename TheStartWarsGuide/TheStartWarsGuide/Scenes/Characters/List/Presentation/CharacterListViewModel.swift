@@ -11,6 +11,7 @@ import Observation
 final class CharacterListViewModel: CharacterListViewModelProtocol {
     
     private let fetchAllCharactersUseCase: FetchAllCharactersUseCaseProtocol
+    private var characterModels: [CharacterModel] = []
     var isLoading = false
     var characters: [CharacterListViewData]
     
@@ -22,8 +23,8 @@ final class CharacterListViewModel: CharacterListViewModelProtocol {
     func loadContent() async {
         isLoading = true
         do {
-            async let charactersModel = fetchAllCharactersUseCase.execute()
-            characters = try await charactersModel.map{ CharacterListViewData(from: $0) }
+            characterModels = try await fetchAllCharactersUseCase.execute()
+            characters = characterModels.map{ CharacterListViewData(from: $0) }
             isLoading = false
         } catch let error as CustomError {
             isLoading = false
@@ -46,5 +47,9 @@ final class CharacterListViewModel: CharacterListViewModelProtocol {
             //TODO: Display a Feedack view with an unespected error message
             debugPrint("Unknown error")
         }
+    }
+    
+    func getModel(of characterName: String) -> CharacterModel {
+        characterModels.first(where: { $0.name == characterName }) ?? .mock
     }
 }

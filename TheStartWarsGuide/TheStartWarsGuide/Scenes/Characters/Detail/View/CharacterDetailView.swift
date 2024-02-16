@@ -8,14 +8,40 @@
 import SwiftUI
 
 struct CharacterDetailView: View {
+    
+    var viewModel: CharacterDetailViewModelProtocol
+    @State private var didEndFirstLoad = false
+    @State private var screenTitle = CharacterDetailConstants.defaultTitle
+    
     var body: some View {
-            VStack {
-                Text("Detail")
+        VStack {
+            if viewModel.isLoading, !didEndFirstLoad {
+                ProgressView() {
+                    Text(CharacterDetailConstants.loading)
+                        .font(.title3)
+                }
+                .onAppear() {
+                    screenTitle = CharacterDetailConstants.defaultTitle
+                }
+                .onDisappear() {
+                    didEndFirstLoad = true
+                    screenTitle = viewModel.viewData.title
+                }
+            } else {
+                CharacterDetailImageView(characterImageName: viewModel.viewData.title)
+                VerticalSectionsView(sections: viewModel.viewData.listSections)
             }
-            .navigationTitle("Detail")
+        }
+        .navigationTitle(screenTitle)
+        .refreshable {
+            await viewModel.loadContent()
+        }
+        .task {
+            await viewModel.loadContent()
+        }
     }
 }
 
 #Preview {
-    CharacterDetailView()
+    CharactersSceneBuilder.shared.buildCharacterDetailView(for: .mock)
 }

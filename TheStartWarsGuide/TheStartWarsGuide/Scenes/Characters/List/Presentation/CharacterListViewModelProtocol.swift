@@ -10,4 +10,5 @@ protocol CharacterListViewModelProtocol {
     var characters: [CharacterListViewData] { get }
     
     func loadContent() async
+    func getModel(of characterName: String) -> CharacterModel
 }

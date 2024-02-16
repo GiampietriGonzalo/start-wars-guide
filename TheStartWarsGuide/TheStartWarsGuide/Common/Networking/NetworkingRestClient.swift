@@ -8,18 +8,18 @@
 import Foundation
 
 final class NetworkingRestClient: NetworkingClientProtocol {
+    static let shared = NetworkingRestClient()
+    private var session = URLSession(configuration: .default)
     
-    private let sessionConfiguration: URLSessionConfiguration
+    private init() {}
     
-    init(sessionConfiguration: URLSessionConfiguration = .default) {
-        self.sessionConfiguration = sessionConfiguration
+    func configure(with configuration: URLSessionConfiguration) {
+        session = URLSession(configuration: configuration)
     }
     
     func fetch<T: Decodable>(from url: URL) async throws -> T {
         var dto: T
-        
         do {
-            let session = URLSession(configuration: sessionConfiguration)
             let (data, response) = try await session.data(from: url)
             guard let httpResponse = response as? HTTPURLResponse,
                   (200...299).contains(httpResponse.statusCode) else {
