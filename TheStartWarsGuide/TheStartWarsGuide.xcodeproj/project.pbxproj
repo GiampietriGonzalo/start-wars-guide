@@ -48,9 +48,6 @@
 		7A50C8202B7D4AE2003B7A64 /* FetchVehiclesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A50C81F2B7D4AE2003B7A64 /* FetchVehiclesUseCase.swift */; };
 		7A50C8222B7D86D7003B7A64 /* FetchFilmsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A50C8212B7D86D7003B7A64 /* FetchFilmsUseCase.swift */; };
 		7A50C8242B7D89FE003B7A64 /* CharacterDetailViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A50C8232B7D89FE003B7A64 /* CharacterDetailViewData.swift */; };
-		7A50C8262B7D8A25003B7A64 /* FilmViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A50C8252B7D8A25003B7A64 /* FilmViewData.swift */; };
-		7A50C8282B7D8A41003B7A64 /* VehicleViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A50C8272B7D8A41003B7A64 /* VehicleViewData.swift */; };
-		7A50C82A2B7D8A48003B7A64 /* PlanetViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A50C8292B7D8A48003B7A64 /* PlanetViewData.swift */; };
 		7A50C82E2B7E4F54003B7A64 /* CharactersSceneBuilderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A50C82D2B7E4F54003B7A64 /* CharactersSceneBuilderProtocol.swift */; };
 		7A50C8302B7E5C14003B7A64 /* CharacterDetailConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A50C82F2B7E5C14003B7A64 /* CharacterDetailConstants.swift */; };
 		7A50C8322B7EA030003B7A64 /* CharacterDetailVerticalItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A50C8312B7EA030003B7A64 /* CharacterDetailVerticalItemView.swift */; };
@@ -124,9 +121,6 @@
 		7A50C81F2B7D4AE2003B7A64 /* FetchVehiclesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchVehiclesUseCase.swift; sourceTree = "<group>"; };
 		7A50C8212B7D86D7003B7A64 /* FetchFilmsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchFilmsUseCase.swift; sourceTree = "<group>"; };
 		7A50C8232B7D89FE003B7A64 /* CharacterDetailViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewData.swift; sourceTree = "<group>"; };
-		7A50C8252B7D8A25003B7A64 /* FilmViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmViewData.swift; sourceTree = "<group>"; };
-		7A50C8272B7D8A41003B7A64 /* VehicleViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleViewData.swift; sourceTree = "<group>"; };
-		7A50C8292B7D8A48003B7A64 /* PlanetViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetViewData.swift; sourceTree = "<group>"; };
 		7A50C82D2B7E4F54003B7A64 /* CharactersSceneBuilderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersSceneBuilderProtocol.swift; sourceTree = "<group>"; };
 		7A50C82F2B7E5C14003B7A64 /* CharacterDetailConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailConstants.swift; sourceTree = "<group>"; };
 		7A50C8312B7EA030003B7A64 /* CharacterDetailVerticalItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailVerticalItemView.swift; sourceTree = "<group>"; };
@@ -373,9 +367,6 @@
 			children = (
 				7A01FB612B7A70CC00A813A5 /* CharacterDetailView.swift */,
 				7A50C8232B7D89FE003B7A64 /* CharacterDetailViewData.swift */,
-				7A50C8292B7D8A48003B7A64 /* PlanetViewData.swift */,
-				7A50C8272B7D8A41003B7A64 /* VehicleViewData.swift */,
-				7A50C8252B7D8A25003B7A64 /* FilmViewData.swift */,
 				7A50C8312B7EA030003B7A64 /* CharacterDetailVerticalItemView.swift */,
 				7A50C8352B7F8FB2003B7A64 /* CharacterDetailImageView.swift */,
 			);
@@ -582,7 +573,6 @@
 				7A50C8362B7F8FB2003B7A64 /* CharacterDetailImageView.swift in Sources */,
 				7A50C8242B7D89FE003B7A64 /* CharacterDetailViewData.swift in Sources */,
 				7A092B342B76673200CE50CD /* CharacterListView.swift in Sources */,
-				7A50C8262B7D8A25003B7A64 /* FilmViewData.swift in Sources */,
 				7A50C8012B7D3119003B7A64 /* CharacterDetailViewModelProtocol.swift in Sources */,
 				7A01FB4E2B76B4C900A813A5 /* CharacterListRepositoryProtocol.swift in Sources */,
 				7A50C8202B7D4AE2003B7A64 /* FetchVehiclesUseCase.swift in Sources */,
@@ -607,8 +597,6 @@
 				7A50C8152B7D4314003B7A64 /* FetchFilmsUseCaseProtocol.swift in Sources */,
 				7A01FB502B76B4D000A813A5 /* CharacterListRepository.swift in Sources */,
 				7A50C8032B7D3129003B7A64 /* CharacterDetailViewModel.swift in Sources */,
-				7A50C82A2B7D8A48003B7A64 /* PlanetViewData.swift in Sources */,
-				7A50C8282B7D8A41003B7A64 /* VehicleViewData.swift in Sources */,
 				7A01FB572B76F6B300A813A5 /* CharacterListConstants.swift in Sources */,
 				7A01FB442B766D3800A813A5 /* CellWithImage.swift in Sources */,
 			);
