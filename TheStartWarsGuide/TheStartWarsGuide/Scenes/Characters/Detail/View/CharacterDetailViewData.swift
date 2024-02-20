@@ -10,24 +10,10 @@ import Foundation
 struct CharacterDetailViewData {
     let title: String
     let characterName: String
-    let listSections: [VerticalSectionViewData]
-    let carrouselSections: [VerticalSectionViewData]
+    let listSections: [SectionViewData]
+    let carrouselSections: [CarrouselSectionViewData]
 }
 
 extension CharacterDetailViewData {
-    static let empty = CharacterDetailViewData(title: "", characterName: "", listSections: [], carrouselSections: [])
+    static let empty = CharacterDetailViewData(title: "R2-D2", characterName: "", listSections: [], carrouselSections: [])
 }
-
-struct VerticalSectionViewData: Identifiable {
-    var id = UUID()
-    let title: String
-    let items: [SectionItemViewData]
-}
-
-struct SectionItemViewData: Identifiable {
-    var id = UUID()
-    let title: String
-    let description: String
-    var image: String?
-}
-

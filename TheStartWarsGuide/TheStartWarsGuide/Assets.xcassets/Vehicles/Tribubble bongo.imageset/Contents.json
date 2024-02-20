@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "Tribubble bongo.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "Revenge of the Sith.jpeg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

@@ -25,7 +25,10 @@
 		7A01FB6C2B7ADFCD00A813A5 /* CharactersSceneCoordinatorViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A01FB6B2B7ADFCD00A813A5 /* CharactersSceneCoordinatorViewModelProtocol.swift */; };
 		7A01FB6E2B7AE07B00A813A5 /* CharactersScenePushNavigationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A01FB6D2B7AE07B00A813A5 /* CharactersScenePushNavigationType.swift */; };
 		7A01FB702B7AFE7500A813A5 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A01FB6F2B7AFE7500A813A5 /* CoordinatorProtocol.swift */; };
-		7A092AF42B765B1900CE50CD /* TheStartWarsGuideApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A092AF32B765B1900CE50CD /* TheStartWarsGuideApp.swift */; };
+		7A0538DD2B81A6C80026BF11 /* CarrouselSectionViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0538DC2B81A6C80026BF11 /* CarrouselSectionViewData.swift */; };
+		7A0538E22B82B2250026BF11 /* TheStartWarsGuideApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0538E12B82B2250026BF11 /* TheStartWarsGuideApp.swift */; };
+		7A0538E42B838BB00026BF11 /* CarrouselSectionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0538E32B838BB00026BF11 /* CarrouselSectionType.swift */; };
+		7A0538E62B83A7F40026BF11 /* CarrouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0538E52B83A7F40026BF11 /* CarrouselView.swift */; };
 		7A092AF82B765B1E00CE50CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A092AF72B765B1E00CE50CD /* Assets.xcassets */; };
 		7A092AFB2B765B1E00CE50CD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A092AFA2B765B1E00CE50CD /* Preview Assets.xcassets */; };
 		7A092B052B765B1F00CE50CD /* TheStartWarsGuideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A092B042B765B1F00CE50CD /* TheStartWarsGuideTests.swift */; };
@@ -50,13 +53,16 @@
 		7A50C8242B7D89FE003B7A64 /* CharacterDetailViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A50C8232B7D89FE003B7A64 /* CharacterDetailViewData.swift */; };
 		7A50C82E2B7E4F54003B7A64 /* CharactersSceneBuilderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A50C82D2B7E4F54003B7A64 /* CharactersSceneBuilderProtocol.swift */; };
 		7A50C8302B7E5C14003B7A64 /* CharacterDetailConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A50C82F2B7E5C14003B7A64 /* CharacterDetailConstants.swift */; };
-		7A50C8322B7EA030003B7A64 /* CharacterDetailVerticalItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A50C8312B7EA030003B7A64 /* CharacterDetailVerticalItemView.swift */; };
+		7A50C8322B7EA030003B7A64 /* VerticalItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A50C8312B7EA030003B7A64 /* VerticalItemView.swift */; };
 		7A50C8342B7F8E13003B7A64 /* VerticalSectionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A50C8332B7F8E12003B7A64 /* VerticalSectionsView.swift */; };
 		7A50C8362B7F8FB2003B7A64 /* CharacterDetailImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A50C8352B7F8FB2003B7A64 /* CharacterDetailImageView.swift */; };
 		7A50C8392B7F921D003B7A64 /* ImageConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A50C8382B7F921D003B7A64 /* ImageConstant.swift */; };
 		7AD572732B7B096000492A14 /* CharacterListViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD572722B7B096000492A14 /* CharacterListViewModelProtocol.swift */; };
 		7AD572752B7C5AFE00492A14 /* NavigationTypeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD572742B7C5AFE00492A14 /* NavigationTypeProtocols.swift */; };
 		7AF93F052B7FD8B700AF3DA0 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF93F042B7FD8B600AF3DA0 /* Colors.swift */; };
+		7AF99BE02B80FDB6004E9DB7 /* HorizontalCardItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF99BDF2B80FDB6004E9DB7 /* HorizontalCardItemView.swift */; };
+		7AF99BE32B80FE09004E9DB7 /* SectionViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF99BE22B80FE09004E9DB7 /* SectionViewData.swift */; };
+		7AF99BE52B80FE24004E9DB7 /* SectionItemViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF99BE42B80FE24004E9DB7 /* SectionItemViewData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,8 +101,11 @@
 		7A01FB6B2B7ADFCD00A813A5 /* CharactersSceneCoordinatorViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersSceneCoordinatorViewModelProtocol.swift; sourceTree = "<group>"; };
 		7A01FB6D2B7AE07B00A813A5 /* CharactersScenePushNavigationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersScenePushNavigationType.swift; sourceTree = "<group>"; };
 		7A01FB6F2B7AFE7500A813A5 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
+		7A0538DC2B81A6C80026BF11 /* CarrouselSectionViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrouselSectionViewData.swift; sourceTree = "<group>"; };
+		7A0538E12B82B2250026BF11 /* TheStartWarsGuideApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TheStartWarsGuideApp.swift; path = ../TheStartWarsGuideApp.swift; sourceTree = "<group>"; };
+		7A0538E32B838BB00026BF11 /* CarrouselSectionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrouselSectionType.swift; sourceTree = "<group>"; };
+		7A0538E52B83A7F40026BF11 /* CarrouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrouselView.swift; sourceTree = "<group>"; };
 		7A092AF02B765B1900CE50CD /* TheStartWarsGuide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheStartWarsGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		7A092AF32B765B1900CE50CD /* TheStartWarsGuideApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheStartWarsGuideApp.swift; sourceTree = "<group>"; };
 		7A092AF72B765B1E00CE50CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A092AFA2B765B1E00CE50CD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7A092B002B765B1F00CE50CD /* TheStartWarsGuideTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TheStartWarsGuideTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,13 +132,16 @@
 		7A50C8232B7D89FE003B7A64 /* CharacterDetailViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewData.swift; sourceTree = "<group>"; };
 		7A50C82D2B7E4F54003B7A64 /* CharactersSceneBuilderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersSceneBuilderProtocol.swift; sourceTree = "<group>"; };
 		7A50C82F2B7E5C14003B7A64 /* CharacterDetailConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailConstants.swift; sourceTree = "<group>"; };
-		7A50C8312B7EA030003B7A64 /* CharacterDetailVerticalItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailVerticalItemView.swift; sourceTree = "<group>"; };
+		7A50C8312B7EA030003B7A64 /* VerticalItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalItemView.swift; sourceTree = "<group>"; };
 		7A50C8332B7F8E12003B7A64 /* VerticalSectionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalSectionsView.swift; sourceTree = "<group>"; };
 		7A50C8352B7F8FB2003B7A64 /* CharacterDetailImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailImageView.swift; sourceTree = "<group>"; };
 		7A50C8382B7F921D003B7A64 /* ImageConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageConstant.swift; sourceTree = "<group>"; };
 		7AD572722B7B096000492A14 /* CharacterListViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListViewModelProtocol.swift; sourceTree = "<group>"; };
 		7AD572742B7C5AFE00492A14 /* NavigationTypeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTypeProtocols.swift; sourceTree = "<group>"; };
 		7AF93F042B7FD8B600AF3DA0 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		7AF99BDF2B80FDB6004E9DB7 /* HorizontalCardItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalCardItemView.swift; sourceTree = "<group>"; };
+		7AF99BE22B80FE09004E9DB7 /* SectionViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionViewData.swift; sourceTree = "<group>"; };
+		7AF99BE42B80FE24004E9DB7 /* SectionItemViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionItemViewData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,8 +185,12 @@
 		7A01FB462B766E7600A813A5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7AF99BE12B80FDF2004E9DB7 /* ViewData */,
 				7A01FB432B766D3700A813A5 /* CellWithImage.swift */,
 				7A50C8332B7F8E12003B7A64 /* VerticalSectionsView.swift */,
+				7A50C8312B7EA030003B7A64 /* VerticalItemView.swift */,
+				7AF99BDF2B80FDB6004E9DB7 /* HorizontalCardItemView.swift */,
+				7A0538E52B83A7F40026BF11 /* CarrouselView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -242,7 +258,6 @@
 			children = (
 				7A01FB452B766E6C00A813A5 /* Common */,
 				7A092B1D2B76654100CE50CD /* Scenes */,
-				7A092AF32B765B1900CE50CD /* TheStartWarsGuideApp.swift */,
 				7A092AF72B765B1E00CE50CD /* Assets.xcassets */,
 				7A092AF92B765B1E00CE50CD /* Preview Content */,
 			);
@@ -278,6 +293,7 @@
 			isa = PBXGroup;
 			children = (
 				7A092B1E2B76654C00CE50CD /* Characters */,
+				7A0538E12B82B2250026BF11 /* TheStartWarsGuideApp.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -367,7 +383,6 @@
 			children = (
 				7A01FB612B7A70CC00A813A5 /* CharacterDetailView.swift */,
 				7A50C8232B7D89FE003B7A64 /* CharacterDetailViewData.swift */,
-				7A50C8312B7EA030003B7A64 /* CharacterDetailVerticalItemView.swift */,
 				7A50C8352B7F8FB2003B7A64 /* CharacterDetailImageView.swift */,
 			);
 			path = View;
@@ -422,6 +437,17 @@
 				7AF93F042B7FD8B600AF3DA0 /* Colors.swift */,
 			);
 			path = Color;
+			sourceTree = "<group>";
+		};
+		7AF99BE12B80FDF2004E9DB7 /* ViewData */ = {
+			isa = PBXGroup;
+			children = (
+				7AF99BE22B80FE09004E9DB7 /* SectionViewData.swift */,
+				7AF99BE42B80FE24004E9DB7 /* SectionItemViewData.swift */,
+				7A0538DC2B81A6C80026BF11 /* CarrouselSectionViewData.swift */,
+				7A0538E32B838BB00026BF11 /* CarrouselSectionType.swift */,
+			);
+			path = ViewData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -558,16 +584,19 @@
 				7A01FB522B76B55E00A813A5 /* CharacterModel.swift in Sources */,
 				7A01FB6E2B7AE07B00A813A5 /* CharactersScenePushNavigationType.swift in Sources */,
 				7A50C8092B7D3D77003B7A64 /* FetchVehiclesUseCaseProtocol.swift in Sources */,
+				7A0538DD2B81A6C80026BF11 /* CarrouselSectionViewData.swift in Sources */,
 				7A01FB5A2B76F70C00A813A5 /* CustomError.swift in Sources */,
 				7AF93F052B7FD8B700AF3DA0 /* Colors.swift in Sources */,
 				7A01FB642B7ADEF600A813A5 /* CharactersSceneCoordinatorView.swift in Sources */,
 				7A01FB602B79995800A813A5 /* CharacterListViewData.swift in Sources */,
 				7A01FB622B7A70CC00A813A5 /* CharacterDetailView.swift in Sources */,
 				7A50C81A2B7D45DD003B7A64 /* NetworkingClientProtocol.swift in Sources */,
-				7A50C8322B7EA030003B7A64 /* CharacterDetailVerticalItemView.swift in Sources */,
+				7A50C8322B7EA030003B7A64 /* VerticalItemView.swift in Sources */,
 				7A50C80B2B7D3DA5003B7A64 /* CharacterDetailRepositoryProtocol.swift in Sources */,
 				7A01FB482B76B2FA00A813A5 /* CharacterListViewModel.swift in Sources */,
+				7AF99BE02B80FDB6004E9DB7 /* HorizontalCardItemView.swift in Sources */,
 				7A50C8302B7E5C14003B7A64 /* CharacterDetailConstants.swift in Sources */,
+				7A0538E42B838BB00026BF11 /* CarrouselSectionType.swift in Sources */,
 				7A01FB5C2B77D58900A813A5 /* CharactersSceneBuilder.swift in Sources */,
 				7A01FB542B76F3AE00A813A5 /* CharacterListDTO.swift in Sources */,
 				7A50C8362B7F8FB2003B7A64 /* CharacterDetailImageView.swift in Sources */,
@@ -581,12 +610,13 @@
 				7A50C8112B7D3F4D003B7A64 /* VehicleModel.swift in Sources */,
 				7A50C81E2B7D46E4003B7A64 /* NetworkingRestClient.swift in Sources */,
 				7A01FB662B7ADF0400A813A5 /* CharactersSceneCoordinatorViewModel.swift in Sources */,
-				7A092AF42B765B1900CE50CD /* TheStartWarsGuideApp.swift in Sources */,
+				7AF99BE52B80FE24004E9DB7 /* SectionItemViewData.swift in Sources */,
 				7A50C8392B7F921D003B7A64 /* ImageConstant.swift in Sources */,
 				7A01FB702B7AFE7500A813A5 /* CoordinatorProtocol.swift in Sources */,
 				7A50C80F2B7D3E5A003B7A64 /* PlanetModel.swift in Sources */,
 				7A01FB4C2B76B33E00A813A5 /* FetchAllCharactersUseCase.swift in Sources */,
 				7AD572752B7C5AFE00492A14 /* NavigationTypeProtocols.swift in Sources */,
+				7A0538E22B82B2250026BF11 /* TheStartWarsGuideApp.swift in Sources */,
 				7A50C8342B7F8E13003B7A64 /* VerticalSectionsView.swift in Sources */,
 				7A50C8132B7D42AC003B7A64 /* FilmModel.swift in Sources */,
 				7A50C82E2B7E4F54003B7A64 /* CharactersSceneBuilderProtocol.swift in Sources */,
@@ -594,6 +624,8 @@
 				7A50C8172B7D43E9003B7A64 /* FetchPlanetInformationUseCase.swift in Sources */,
 				7A01FB6C2B7ADFCD00A813A5 /* CharactersSceneCoordinatorViewModelProtocol.swift in Sources */,
 				7A50C80D2B7D3DB5003B7A64 /* CharacterDetailRepository.swift in Sources */,
+				7A0538E62B83A7F40026BF11 /* CarrouselView.swift in Sources */,
+				7AF99BE32B80FE09004E9DB7 /* SectionViewData.swift in Sources */,
 				7A50C8152B7D4314003B7A64 /* FetchFilmsUseCaseProtocol.swift in Sources */,
 				7A01FB502B76B4D000A813A5 /* CharacterListRepository.swift in Sources */,
 				7A50C8032B7D3129003B7A64 /* CharacterDetailViewModel.swift in Sources */,
@@ -759,15 +791,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TheStartWarsGuide/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TheStartWarsGuide/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Star Guide";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -788,15 +823,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TheStartWarsGuide/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TheStartWarsGuide/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Star Guide";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (

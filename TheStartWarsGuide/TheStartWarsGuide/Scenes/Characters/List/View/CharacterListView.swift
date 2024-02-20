@@ -47,7 +47,7 @@ fileprivate struct CharacterListBodyView<Coordinator: CharactersSceneCoordinator
                             }
                             .opacity(0)
                     }
-                    Image(systemName: ImageConstant.forwardButtoImage)
+                    Image(systemName: ImageConstant.forwardButtonImage)
                 }
             }
         }
@@ -59,7 +59,5 @@ fileprivate struct CharacterListBodyView<Coordinator: CharactersSceneCoordinator
 }
 
 #Preview {
-    NavigationStack {
-        CharactersSceneBuilder.shared.buildListView()
-    }
+    CharactersSceneCoordinatorView(viewModel: CharactersSceneCoordinatorViewModel.shared)
 }

@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "Return of the Jedi.jpeg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

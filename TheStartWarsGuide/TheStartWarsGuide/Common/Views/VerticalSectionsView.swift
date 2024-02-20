@@ -8,20 +8,32 @@
 import SwiftUI
 
 struct VerticalSectionsView: View {
-    var sections: [VerticalSectionViewData]
+    var sections: [SectionViewData]
     
     var body: some View {
-        List {
+        VStack {
             ForEach(sections) { section in
-                Section(section.title) {
+                VStack {
+                    HStack {
+                        Text(section.title)
+                            .font(.title2)
+                            .padding(.leading, 8)
+                        Spacer()
+                    }
+                    .padding(.bottom, 2)
                     ForEach(section.items) { item in
-                        CharacterDetailVerticalItemView(item: item)
+                        VerticalItemView(item: item)
+                            .padding(EdgeInsets(top: 0.5, leading: 16, bottom: 0.5, trailing: 16))
                     }
                 }
-                .headerProminence(.increased)
+                Divider()
             }
-            .listStyle(.insetGrouped)
-            .background(.clear)
+            .padding(EdgeInsets(top: 24, leading: 16, bottom: 0, trailing: 16))
         }
     }
+}
+
+
+#Preview {
+    VerticalSectionsView(sections: [.mock, .mock])
 }

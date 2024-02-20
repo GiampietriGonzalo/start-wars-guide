@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "Trade Federation cruiser.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

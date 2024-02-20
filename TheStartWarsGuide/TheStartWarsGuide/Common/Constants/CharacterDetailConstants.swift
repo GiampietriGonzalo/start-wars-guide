@@ -12,7 +12,7 @@ struct CharacterDetailConstants {
     static let planetTitle = "Homeworld"
     static let vehiclesSectionTitle = "Vehicles"
     static let starshipsSectionTitle = "Starships"
-    static let filmsSectionTitle = "Films"
+    static let filmsSectionTitle = "Movies"
     
     struct CharacterDetail {
         static let name = "Name"
@@ -37,6 +37,12 @@ struct CharacterDetailConstants {
         static let name = "Name" 
         static let model = "Model"
         static let vehicleClass = "Class"
+        static let length = "Length"
+        static let speed = "Max speed"
+        static let crew = "Crew"
+        static let passengers = "Passengers"
+        static let cargoCapacity = "Cargo capacity"
+        static let cost = "Cost in credits"
     }
     
     struct FilmInformation {

@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "Bantha-II cargo skiff.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

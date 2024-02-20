@@ -6,8 +6,5 @@
 //
 
 struct ImageConstant {
-    static let blueStars = "blueStarsBackground"
-    static let darkStars = "darkStarsBackground"
-    static let mainLogo = "logo"
-    static let forwardButtoImage = "chevron.forward"
+    static let forwardButtonImage = "chevron.forward"
 }

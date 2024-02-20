@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "Speeder_Bike_DICE.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
