@@ -6,7 +6,6 @@
 //
 
 final class FetchFilmsUseCase: FetchFilmsUseCaseProtocol {
-    
     private let repository: CharacterDetailRepositoryProtocol
     
     init(repository: CharacterDetailRepositoryProtocol) {

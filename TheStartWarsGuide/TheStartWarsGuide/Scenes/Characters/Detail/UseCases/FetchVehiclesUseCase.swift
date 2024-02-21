@@ -6,7 +6,6 @@
 //
 
 final class FetchVehiclesUseCase: FetchVehiclesUseCaseProtocol {
-    
     private let repository: CharacterDetailRepositoryProtocol
     
     init(repository: CharacterDetailRepositoryProtocol) {

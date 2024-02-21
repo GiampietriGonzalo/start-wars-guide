@@ -6,7 +6,6 @@
 //
 
 final class FetchPlanetInformationUseCase: FetchPlanetInformationUseCaseProtocol {
-    
     private let repository: CharacterDetailRepositoryProtocol
     
     init(repository: CharacterDetailRepositoryProtocol) {

@@ -8,7 +8,6 @@
 import Foundation
 
 struct CharacterDetailRepository: CharacterDetailRepositoryProtocol {
-   
     private let networkingClient: NetworkingClientProtocol
     
     init(networkingClient: NetworkingClientProtocol) {
