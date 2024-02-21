@@ -7,7 +7,6 @@
 
 protocol CharacterDetailViewModelProtocol {
     var isLoading: Bool { get }
-    var shouldReload: Bool { get }
     var characterModel: CharacterModel { get set }
     var viewData: CharacterDetailViewData { get }
     func loadContent() async

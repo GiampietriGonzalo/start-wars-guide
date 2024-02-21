@@ -23,7 +23,7 @@ struct CharacterDetailRepository: CharacterDetailRepositoryProtocol {
         return try await networkingClient.fetch(from: url)
     }
     
-    func fetchShip(from url: String) async throws -> VehicleModel {
+    func fetchVehicle(from url: String) async throws -> VehicleModel {
         guard let url = URL(string: url) else {
             throw CustomError.invalidUrl
         }

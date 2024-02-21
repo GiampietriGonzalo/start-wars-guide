@@ -7,6 +7,6 @@
 
 protocol CharacterDetailRepositoryProtocol {
     func fetchPlanetInformation(from url: String) async throws -> PlanetModel
-    func fetchShip(from url: String) async throws -> VehicleModel
+    func fetchVehicle(from url: String) async throws -> VehicleModel
     func fetchFilm(from url: String) async throws -> FilmModel
 }

@@ -20,7 +20,7 @@ final class FetchVehiclesUseCase: FetchVehiclesUseCaseProtocol {
             guard let self else { throw CustomError.unknown }
             urls.forEach { url in
                 group.addTask {
-                    return try await self.repository.fetchShip(from: url)
+                    return try await self.repository.fetchVehicle(from: url)
                 }
             }
             

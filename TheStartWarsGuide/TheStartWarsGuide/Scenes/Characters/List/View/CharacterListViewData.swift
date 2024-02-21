@@ -10,10 +10,10 @@ import Foundation
 struct CharacterListViewData: Identifiable {
     var id: UUID = .init()
     let name: String
-    let imageNames: String
+    let imageName: String
     
     init(from model: CharacterModel) {
         self.name = model.name
-        self.imageNames = model.name
+        self.imageName = model.name
     }
 }

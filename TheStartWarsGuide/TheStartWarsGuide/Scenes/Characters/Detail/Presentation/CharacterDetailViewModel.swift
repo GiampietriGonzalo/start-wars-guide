@@ -16,7 +16,6 @@ final class CharacterDetailViewModel: CharacterDetailViewModelProtocol {
     
     @ObservationIgnored var characterModel: CharacterModel
     var viewData: CharacterDetailViewData = .empty
-    var shouldReload = false
     var isLoading = false
     
     init(characterModel: CharacterModel,
@@ -49,7 +48,6 @@ final class CharacterDetailViewModel: CharacterDetailViewModelProtocol {
                                   listSections: [characterInformationSection, homeworldSection],
                                   carrouselSections: carrouselSections)
             isLoading = false
-            shouldReload = true
         } catch let error as CustomError {
             self.isLoading = false
             switch error {

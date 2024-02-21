@@ -40,7 +40,7 @@ fileprivate struct CharacterListBodyView<Coordinator: CharactersSceneCoordinator
         List {
             ForEach(viewModel.characters) { character in
                 HStack {
-                    CellWithImage(text: character.name, imageName: character.name)
+                    CellWithImage(text: character.name, imageName: character.imageName)
                         .overlay {
                             Button("") {
                                 coordinator.push(.detail(character: viewModel.getModel(of: character.name)))

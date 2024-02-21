@@ -20,19 +20,27 @@ final class FetchAllCharactersUseCase: FetchAllCharactersUseCaseProtocol {
         
         // 1. Make the first fetch
         async let firstCharactersList = try await repository.fetch(pageNumber: 1)
+        guard try await !firstCharactersList.results.isEmpty else {
+            return []
+        }
+        
         characters = try await firstCharactersList.results.map { CharacterModel(from: $0) }
         
         // 2. Inspect characters count and the results array count in orden to calculate the remaining services calls.
         let charactersPerPage = try await (firstCharactersList.count / firstCharactersList.results.count)
         let modulo = try await (firstCharactersList.count % firstCharactersList.results.count)
-        let remainingCalls = modulo == .zero ? charactersPerPage : charactersPerPage + 1
+        let totalCalls = modulo == .zero ? charactersPerPage : charactersPerPage + 1
+        
+        guard totalCalls > 1 else {
+            return characters
+        }
        
         // 3. Perform the remainin calls
         var callsResults = [Int: [CharacterModel]]() //Useful to sort the results
         try await withThrowingTaskGroup(of: (Int, [CharacterModel]).self) { [weak self] group in
             guard let self else { throw CustomError.unknown }
             
-            for pageNumber in 2...remainingCalls {
+            for pageNumber in 2...totalCalls {
                 group.addTask {
                     async let pageCharacters = self.repository.fetch(pageNumber: pageNumber).results.map { CharacterModel(from: $0) }
                     return (pageNumber, try await pageCharacters)

@@ -1,0 +1,29 @@
+{
+  "configurations" : [
+    {
+      "id" : "9E1700A6-5FFD-4C36-BD17-CE5AF7851626",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:TheStartWarsGuide.xcodeproj",
+      "identifier" : "7A092AEF2B765B1900CE50CD",
+      "name" : "TheStartWarsGuide"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:TheStartWarsGuide.xcodeproj",
+        "identifier" : "7A092AFF2B765B1F00CE50CD",
+        "name" : "TheStartWarsGuideTests"
+      }
+    }
+  ],
+  "version" : 1
+}
