@@ -2,7 +2,7 @@
 //  VehicleModel.swift
 //  TheStartWarsGuide
 //
-//  Created by Gonzalo.Giampietri on 14/02/2024.
+//  Created by Gonzalo Giampietri
 //
 
 struct VehicleModel: Decodable {

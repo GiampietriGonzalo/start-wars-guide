@@ -2,7 +2,7 @@
 //  CardView.swift
 //  TheStartWarsGuide
 //
-//  Created by Gonzalo.Giampietri on 17/02/2024.
+//  Created by Gonzalo Giampietri
 //
 
 import SwiftUI

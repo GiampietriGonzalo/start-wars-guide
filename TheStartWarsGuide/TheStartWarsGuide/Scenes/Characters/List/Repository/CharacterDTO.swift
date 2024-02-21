@@ -2,7 +2,7 @@
 //  CharacterDTO.swift
 //  TheStartWarsGuide
 //
-//  Created by Gonzalo.Giampietri on 20/02/2024.
+//  Created by Gonzalo Giampietri
 //
 
 struct CharacterDTO: Decodable {

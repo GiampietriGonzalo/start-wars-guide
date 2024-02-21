@@ -2,7 +2,7 @@
 //  CharactersSceneBuilder.swift
 //  TheStartWarsGuide
 //
-//  Created by Gonzalo.Giampietri on 10/02/2024.
+//  Created by Gonzalo Giampietri
 //
 
 import Foundation

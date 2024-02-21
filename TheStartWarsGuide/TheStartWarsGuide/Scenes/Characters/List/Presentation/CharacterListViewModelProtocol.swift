@@ -2,7 +2,7 @@
 //  CharacterListViewModelProtocol.swift
 //  TheStartWarsGuide
 //
-//  Created by Gonzalo.Giampietri on 12/02/2024.
+//  Created by Gonzalo Giampietri
 //
 
 /**

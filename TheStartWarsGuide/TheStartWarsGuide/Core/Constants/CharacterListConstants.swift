@@ -2,7 +2,7 @@
 //  CharacterListConstants.swift
 //  TheStartWarsGuide
 //
-//  Created by Gonzalo.Giampietri on 09/02/2024.
+//  Created by Gonzalo Giampietri
 //
 
 struct CharacterListConstants {

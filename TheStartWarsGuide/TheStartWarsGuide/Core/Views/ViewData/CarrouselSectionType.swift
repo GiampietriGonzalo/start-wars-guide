@@ -2,7 +2,7 @@
 //  CarrouselSectionType.swift
 //  TheStartWarsGuide
 //
-//  Created by Gonzalo.Giampietri on 19/02/2024.
+//  Created by Gonzalo Giampietri
 //
 
 import Foundation

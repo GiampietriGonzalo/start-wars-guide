@@ -2,7 +2,7 @@
 //  CharacterDetailRepositoryTests.swift
 //  TheStartWarsGuideTests
 //
-//  Created by Gonzalo.Giampietri on 20/02/2024.
+//  Created by Gonzalo Giampietri
 //
 
 import XCTest

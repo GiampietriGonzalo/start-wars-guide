@@ -2,7 +2,7 @@
 //  CharacterDetailConstants.swift
 //  TheStartWarsGuide
 //
-//  Created by Gonzalo.Giampietri on 15/02/2024.
+//  Created by Gonzalo Giampietri
 //
 
 struct CharacterDetailConstants {
