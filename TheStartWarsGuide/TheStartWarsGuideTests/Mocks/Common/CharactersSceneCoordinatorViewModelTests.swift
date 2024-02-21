@@ -21,7 +21,6 @@ final class CharactersSceneCoordinatorViewModelTests: XCTestCase {
     }
 
     func test_push() {
-        let characterMock = CharacterModel.mock
         let itemToPush = CharactersScenePushNavigationType.detail(character: .mock)
         sut.push(itemToPush)
         

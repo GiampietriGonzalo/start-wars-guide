@@ -58,7 +58,8 @@ final class FetchFilmsUseCaseTests: XCTestCase {
     func test_execute_error() async {
         repositoryMock.error = .networkError
         do {
-            let results = try await sut.execute(with: ["vehicleUrl"])
+            _ = try await sut.execute(with: ["vehicleUrl"])
+            XCTFail()
         } catch let error as CustomError {
             XCTAssertEqual(error, .networkError)
         } catch {
