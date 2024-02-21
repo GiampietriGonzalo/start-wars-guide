@@ -71,7 +71,7 @@
 		7AD572732B7B096000492A14 /* CharacterListViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD572722B7B096000492A14 /* CharacterListViewModelProtocol.swift */; };
 		7AD572752B7C5AFE00492A14 /* NavigationTypeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD572742B7C5AFE00492A14 /* NavigationTypeProtocols.swift */; };
 		7AF93F052B7FD8B700AF3DA0 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF93F042B7FD8B600AF3DA0 /* Colors.swift */; };
-		7AF99BE02B80FDB6004E9DB7 /* HorizontalCardItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF99BDF2B80FDB6004E9DB7 /* HorizontalCardItemView.swift */; };
+		7AF99BE02B80FDB6004E9DB7 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF99BDF2B80FDB6004E9DB7 /* CardView.swift */; };
 		7AF99BE32B80FE09004E9DB7 /* SectionViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF99BE22B80FE09004E9DB7 /* SectionViewData.swift */; };
 		7AF99BE52B80FE24004E9DB7 /* SectionItemViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF99BE42B80FE24004E9DB7 /* SectionItemViewData.swift */; };
 		7AFB0CA12B844CE800F4F9D0 /* CharacterListRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFB0CA02B844CE800F4F9D0 /* CharacterListRepositoryTests.swift */; };
@@ -157,7 +157,7 @@
 		7AD572722B7B096000492A14 /* CharacterListViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListViewModelProtocol.swift; sourceTree = "<group>"; };
 		7AD572742B7C5AFE00492A14 /* NavigationTypeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTypeProtocols.swift; sourceTree = "<group>"; };
 		7AF93F042B7FD8B600AF3DA0 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
-		7AF99BDF2B80FDB6004E9DB7 /* HorizontalCardItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalCardItemView.swift; sourceTree = "<group>"; };
+		7AF99BDF2B80FDB6004E9DB7 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		7AF99BE22B80FE09004E9DB7 /* SectionViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionViewData.swift; sourceTree = "<group>"; };
 		7AF99BE42B80FE24004E9DB7 /* SectionItemViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionItemViewData.swift; sourceTree = "<group>"; };
 		7AFB0CA02B844CE800F4F9D0 /* CharacterListRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListRepositoryTests.swift; sourceTree = "<group>"; };
@@ -183,7 +183,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7A01FB452B766E6C00A813A5 /* Common */ = {
+		7A01FB452B766E6C00A813A5 /* Core */ = {
 			isa = PBXGroup;
 			children = (
 				7AF93F032B7FD8AB00AF3DA0 /* Color */,
@@ -193,7 +193,7 @@
 				7A01FB552B76F67F00A813A5 /* Constants */,
 				7A01FB462B766E7600A813A5 /* Views */,
 			);
-			path = Common;
+			path = Core;
 			sourceTree = "<group>";
 		};
 		7A01FB462B766E7600A813A5 /* Views */ = {
@@ -203,7 +203,7 @@
 				7A01FB432B766D3700A813A5 /* CellWithImage.swift */,
 				7A50C8332B7F8E12003B7A64 /* VerticalSectionsView.swift */,
 				7A50C8312B7EA030003B7A64 /* VerticalItemView.swift */,
-				7AF99BDF2B80FDB6004E9DB7 /* HorizontalCardItemView.swift */,
+				7AF99BDF2B80FDB6004E9DB7 /* CardView.swift */,
 				7A0538E52B83A7F40026BF11 /* CarrouselView.swift */,
 			);
 			path = Views;
@@ -269,7 +269,7 @@
 		7A092AF22B765B1900CE50CD /* TheStartWarsGuide */ = {
 			isa = PBXGroup;
 			children = (
-				7A01FB452B766E6C00A813A5 /* Common */,
+				7A01FB452B766E6C00A813A5 /* Core */,
 				7A092B1D2B76654100CE50CD /* Scenes */,
 				7A092AF72B765B1E00CE50CD /* Assets.xcassets */,
 				7A092AF92B765B1E00CE50CD /* Preview Content */,
@@ -688,7 +688,7 @@
 				7A50C8322B7EA030003B7A64 /* VerticalItemView.swift in Sources */,
 				7A50C80B2B7D3DA5003B7A64 /* CharacterDetailRepositoryProtocol.swift in Sources */,
 				7A01FB482B76B2FA00A813A5 /* CharacterListViewModel.swift in Sources */,
-				7AF99BE02B80FDB6004E9DB7 /* HorizontalCardItemView.swift in Sources */,
+				7AF99BE02B80FDB6004E9DB7 /* CardView.swift in Sources */,
 				7A50C8302B7E5C14003B7A64 /* CharacterDetailConstants.swift in Sources */,
 				7A0538E42B838BB00026BF11 /* CarrouselSectionType.swift in Sources */,
 				7A01FB5C2B77D58900A813A5 /* CharactersSceneBuilder.swift in Sources */,

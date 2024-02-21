@@ -1,5 +1,5 @@
 //
-//  HorizontalCardItemView.swift
+//  CardView.swift
 //  TheStartWarsGuide
 //
 //  Created by Gonzalo.Giampietri on 17/02/2024.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct HorizontalCardItemView: View {
+struct CardView: View {
     let viewData: SectionViewData
 
     var body: some View {
@@ -18,7 +18,8 @@ struct HorizontalCardItemView: View {
                 .multilineTextAlignment(.center)
             Divider().background(.primary)
            
-            if var imageName = viewData.imageName?.replacingOccurrences(of: "/", with: ""), !imageName.isEmpty {
+            if let imageName = viewData.imageName?.replacingOccurrences(of: "/", with: ""),
+               !imageName.isEmpty {
                 Image(imageName)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
@@ -27,13 +28,13 @@ struct HorizontalCardItemView: View {
                 Divider().background(.primary)
             }
             
-            HorizontalCardItemInformationView(items: viewData.items)
+            CardInformationView(items: viewData.items)
         }
         .border(.primary, width: 0.2)
     }
 }
 
-fileprivate struct HorizontalCardItemInformationView: View {
+fileprivate struct CardInformationView: View {
     let items: [SectionItemViewData]
     
     var body: some View {
@@ -50,7 +51,7 @@ fileprivate struct HorizontalCardItemInformationView: View {
 }
 
 #Preview {
-    HorizontalCardItemView(viewData: .mock)
+    CardView(viewData: .mock)
         .padding(10)
         .preferredColorScheme(.dark)
 }

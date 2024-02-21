@@ -41,7 +41,7 @@ fileprivate struct CarrouselBodyView: View {
         ScrollView(.horizontal) {
             HStack {
                 ForEach(section.items) { items in
-                    HorizontalCardItemView(viewData: items)
+                    CardView(viewData: items)
                         .frame(width: section.items.count > 1 ? fullWidth * 0.8 : fullWidth * 0.95,
                                height: section.type.rawValue)
                 }

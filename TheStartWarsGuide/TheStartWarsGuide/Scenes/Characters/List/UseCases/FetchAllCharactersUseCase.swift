@@ -36,7 +36,8 @@ final class FetchAllCharactersUseCase: FetchAllCharactersUseCaseProtocol {
         }
        
         // 3. Perform the remainin calls
-        var callsResults = [Int: [CharacterModel]]() //Useful to sort the results
+        var callsResults = [Int: [CharacterModel]]() //Useful to sort the results using the page number
+        
         try await withThrowingTaskGroup(of: (Int, [CharacterModel]).self) { [weak self] group in
             guard let self else { throw CustomError.unknown }
             

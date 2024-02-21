@@ -12,7 +12,7 @@ import Foundation
  - Important: Conforms the Singleton pattern. Must use the **shared** property.
  - Note: Maintains a single reference to an optional CharacterListViewModelProtocol.
  */
-final class CharactersSceneBuilder {
+final class CharactersSceneBuilder: CharactersSceneBuilderProtocol {
     
     static let shared = CharactersSceneBuilder()
     private let networkingClient = NetworkingRestClient.shared

@@ -13,7 +13,6 @@ import Observation
  - Requires a NavigationPath
  - Important: Conforms the Singleton pattern. Must use the **shared** property.
  */
-
 @Observable
 final class CharactersSceneCoordinatorViewModel: CharactersSceneCoordinatorViewModelProtocol {
     var navigationPath = NavigationPath()

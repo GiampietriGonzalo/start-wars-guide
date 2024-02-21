@@ -8,7 +8,7 @@
 import SwiftUI
 
 /**
- Coordiantor View associated to the Characters scene.
+ Coordinator View associated to the Characters scene.
  - Requires a viewModel of type CharactersSceneCoordinatorViewModel
  */
 struct CharactersSceneCoordinatorView<ViewModel: CharactersSceneCoordinatorViewModelProtocol>: View {
