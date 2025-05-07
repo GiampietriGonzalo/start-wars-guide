@@ -27,7 +27,7 @@ final class CharactersSceneBuilder: CharactersSceneBuilderProtocol {
     func buildListView() -> CharacterListView<CharactersSceneCoordinatorViewModel> {
         guard let characterListViewModel else {
             let repository = CharacterListRepository(networkingClient: networkingClient)
-            let fetchAllCharacterUseCase = FetchAllCharactersUseCase(repository: repository)
+            let fetchAllCharacterUseCase = FetchAllCharactersUseCase(repository: repository, charactersPerPage: 20)
             characterListViewModel = CharacterListViewModel(fetchAllCharactersUseCase: fetchAllCharacterUseCase)
             return CharacterListView(viewModel: characterListViewModel!, coordinator: .shared)
         }

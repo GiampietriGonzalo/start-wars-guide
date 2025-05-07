@@ -43,7 +43,7 @@ fileprivate struct CharacterListBodyView<Coordinator: CharactersSceneCoordinator
                     CellWithImage(text: character.name, imageName: character.imageName)
                         .overlay {
                             Button("") {
-                                coordinator.push(.detail(character: viewModel.getModel(of: character.name)))
+//                                coordinator.push(.detail(character: viewModel.getModel(of: character.name)))
                             }
                             .opacity(0)
                     }

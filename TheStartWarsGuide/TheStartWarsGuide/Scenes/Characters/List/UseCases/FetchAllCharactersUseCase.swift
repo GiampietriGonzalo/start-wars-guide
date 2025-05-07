@@ -10,40 +10,41 @@ import Foundation
 final class FetchAllCharactersUseCase: FetchAllCharactersUseCaseProtocol {
     private let repository: CharacterListRepositoryProtocol
     private var numberOfPages = 1
+    private var charactersPerPage: Int
     
-    init(repository: CharacterListRepositoryProtocol) {
+    init(repository: CharacterListRepositoryProtocol, charactersPerPage: Int) {
         self.repository = repository
+        self.charactersPerPage = charactersPerPage
     }
     
-    func execute() async throws -> [CharacterModel] {
-        var characters = [CharacterModel]()
+    func execute() async throws -> [CharacterListModel] {
+        var characters = [CharacterListModel]()
         
         // 1. Make the first fetch
-        async let firstCharactersList = try await repository.fetch(pageNumber: 1)
+        async let firstCharactersList = try await repository.fetch(pageNumber: 1, limit: charactersPerPage)
         guard try await !firstCharactersList.results.isEmpty else {
             return []
         }
         
-        characters = try await firstCharactersList.results.map { CharacterModel(from: $0) }
+        characters = try await firstCharactersList.results.map { CharacterListModel(from: $0) }
         
         // 2. Inspect characters count and the results array count in orden to calculate the remaining services calls.
-        let charactersPerPage = try await (firstCharactersList.count / firstCharactersList.results.count)
-        let modulo = try await (firstCharactersList.count % firstCharactersList.results.count)
-        let totalCalls = modulo == .zero ? charactersPerPage : charactersPerPage + 1
+        let totalCalls = try await firstCharactersList.totalPages
         
         guard totalCalls > 1 else {
             return characters
         }
        
         // 3. Perform the remainin calls
-        var callsResults = [Int: [CharacterModel]]() //Useful to sort the results using the page number
+        var callsResults = [Int: [CharacterListModel]]() //Useful to sort the results using the page number
         
-        try await withThrowingTaskGroup(of: (Int, [CharacterModel]).self) { [weak self] group in
+        try await withThrowingTaskGroup(of: (Int, [CharacterListModel]).self) { [weak self] group in
             guard let self else { throw CustomError.unknown }
             
             for pageNumber in 2...totalCalls {
                 group.addTask {
-                    async let pageCharacters = self.repository.fetch(pageNumber: pageNumber).results.map { CharacterModel(from: $0) }
+                    async let pageCharacters = self.repository.fetch(pageNumber: pageNumber,
+                                                                     limit: self.charactersPerPage).results.map { CharacterListModel(from: $0) }
                     return (pageNumber, try await pageCharacters)
                 }
             }

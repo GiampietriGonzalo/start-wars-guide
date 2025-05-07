@@ -12,7 +12,7 @@ struct CharacterListViewData: Identifiable {
     let name: String
     let imageName: String
     
-    init(from model: CharacterModel) {
+    init(from model: CharacterListModel) {
         self.name = model.name
         self.imageName = model.name
     }

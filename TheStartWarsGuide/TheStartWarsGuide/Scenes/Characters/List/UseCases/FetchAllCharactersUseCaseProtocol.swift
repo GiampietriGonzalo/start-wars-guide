@@ -14,5 +14,5 @@ protocol FetchAllCharactersUseCaseProtocol {
      * - Returns: An sorted array with all the characters
      * - Throws: CustomError.unknown if self reference is miss. Propagates Custom Errors from the repository
      */
-    func execute() async throws -> [CharacterModel]
+    func execute() async throws -> [CharacterListModel]
 }

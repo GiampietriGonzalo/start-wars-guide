@@ -11,14 +11,14 @@ struct CharacterListRepository: CharacterListRepositoryProtocol {
     private let url: String
     private let networkingClient: NetworkingClientProtocol
     
-    init(url: String = "https://swapi.dev/api/people/?page=",
+    init(url: String = "https://swapi.tech/api/people/?page=",
          networkingClient: NetworkingClientProtocol) {
         self.url = url
         self.networkingClient = networkingClient
     }
     
-    func fetch(pageNumber: Int = 1) async throws -> CharacterListDTO {
-        guard let url = URL(string: url + String(pageNumber)) else {
+    func fetch(pageNumber: Int = 1, limit: Int = 10) async throws -> CharacterListDTO {
+        guard let url = URL(string: url + String(pageNumber) + "&limit=\(limit)") else {
             throw CustomError.invalidUrl
         }
         

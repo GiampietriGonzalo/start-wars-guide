@@ -6,6 +6,12 @@
 //
 
 struct CharacterListDTO: Decodable {
-    let count: Int
-    let results: [CharacterDTO]
+    let totalRecords: Int
+    let totalPages: Int
+    let results: [CharacterOfListDTO]
+}
+
+struct CharacterOfListDTO: Decodable {
+    let uid: String
+    let name: String
 }

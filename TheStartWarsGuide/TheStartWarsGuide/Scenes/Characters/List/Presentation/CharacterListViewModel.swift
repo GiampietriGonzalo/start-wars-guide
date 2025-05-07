@@ -11,7 +11,7 @@ import Observation
 final class CharacterListViewModel: CharacterListViewModelProtocol {
     
     private let fetchAllCharactersUseCase: FetchAllCharactersUseCaseProtocol
-    private var characterModels: [CharacterModel] = []
+    private var characterModels: [CharacterListModel] = []
     var isLoading = false
     var characters: [CharacterListViewData]
     
@@ -49,7 +49,7 @@ final class CharacterListViewModel: CharacterListViewModelProtocol {
         }
     }
     
-    func getModel(of characterName: String) -> CharacterModel {
-        characterModels.first(where: { $0.name == characterName }) ?? .mock
+    func getCharacterId(of characterName: String) -> Int {
+        characterModels.first(where: { $0.name == characterName })?.uid ?? -1
     }
 }

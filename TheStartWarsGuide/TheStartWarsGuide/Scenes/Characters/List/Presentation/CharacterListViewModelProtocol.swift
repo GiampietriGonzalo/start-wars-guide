@@ -18,9 +18,9 @@ protocol CharacterListViewModelProtocol {
     func loadContent() async
     
     /**
-     Returns a CharacterModel using the character name as a filter
+     Returns a Int id using the character name as a filter
      - parameter characterName: The character name to look for the model
-     - returns: The CharacterModel that matchs the character name value of the input parameter
+     - returns: The id that matchs the character name value of the input parameter
      */
-    func getModel(of characterName: String) -> CharacterModel
+    func getCharacterId(of characterName: String) -> Int
 }
