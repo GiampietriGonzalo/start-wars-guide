@@ -18,8 +18,8 @@ protocol CharactersSceneBuilderProtocol {
     
     /**
      Builds and returns a CharacterDetailView
-     - parameter characterModel: The model of the character to display it's information
+     - parameter characterUrl: The url of the character to display it's information
      - returns: A CharacterListView for the character associated to the parameter
      */
-    func buildCharacterDetailView(for characterModel: CharacterModel) -> CharacterDetailView
+    func buildCharacterDetailView(for characterUrl: String) -> CharacterDetailView
 }

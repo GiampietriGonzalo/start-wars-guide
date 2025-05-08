@@ -33,9 +33,9 @@ struct CharacterModel: Identifiable {
         self.birthYear = dto.birthYear
         self.gender = dto.gender
         self.homeworld = dto.homeworld
-        self.films = dto.films
-        self.vehicles = dto.vehicles
-        self.starships = dto.starships
+        self.films = dto.films ?? []
+        self.vehicles = dto.vehicles ?? []
+        self.starships = dto.starships ?? []
     }
 }
 

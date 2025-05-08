@@ -13,6 +13,7 @@ final class FetchPlanetInformationUseCase: FetchPlanetInformationUseCaseProtocol
     }
     
     func execute(with url: String) async throws -> PlanetModel {
-        try await repository.fetchPlanetInformation(from: url)
+        let dto = try await repository.fetchPlanetInformation(from: url)
+        return dto.result.properties
     }
 }

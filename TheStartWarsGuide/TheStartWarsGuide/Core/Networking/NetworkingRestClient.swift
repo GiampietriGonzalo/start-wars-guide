@@ -29,14 +29,14 @@ final class NetworkingRestClient: NetworkingClientProtocol {
             let (data, response) = try await session.data(from: url)
             guard let httpResponse = response as? HTTPURLResponse,
                   (200...299).contains(httpResponse.statusCode) else {
-                throw CustomError.serviceError
+                throw CustomError.serviceError(url.absoluteString)
             }
             
             let decoder = JSONDecoder()
             decoder.keyDecodingStrategy = .convertFromSnakeCase
             dto = try decoder.decode(T.self, from: data)
         } catch _ as DecodingError {
-            throw CustomError.decodeError
+            throw CustomError.decodeError(url.absoluteString)
         } catch {
             throw CustomError.networkError
         }

@@ -13,7 +13,8 @@ protocol CharacterDetailViewModelProtocol {
      Determinates if the view model is performing an asynchronous call in order to display a loading view
      */
     var isLoading: Bool { get }
-    var characterModel: CharacterModel { get set }
+    var characterUrl: String { get set }
+    var characterModel: CharacterModel? { get set }
     var viewData: CharacterDetailViewData { get }
     
     /**

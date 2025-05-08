@@ -32,12 +32,12 @@ final class CharacterListViewModel: CharacterListViewModelProtocol {
             case .networkError, .serviceError:
                 //TODO: "Display a Feedback view specifing for the error and a retry button
                 debugPrint("Network or service error")
-            case .decodeError:
+            case .decodeError(let endpoint):
                 //TODO: Display a Feedack view with an unespected error message and a retry button
-                debugPrint("Decode error: please check the DTO body and compare it with the service response")
-            case .invalidUrl:
+                debugPrint("Decode error | endpoint:", endpoint)
+            case .invalidUrl(let endpoint):
                 //TODO: Display a Feedack view with an unespected error message
-                debugPrint("Invalid url: please check the url of the repository")
+                debugPrint("Invalid url:", endpoint)
             case .unknown:
                 //TODO: Display a Feedack view with an unespected error message
                 debugPrint("Unknown error")
@@ -47,9 +47,5 @@ final class CharacterListViewModel: CharacterListViewModelProtocol {
             //TODO: Display a Feedack view with an unespected error message
             debugPrint("Unknown error")
         }
-    }
-    
-    func getCharacterId(of characterName: String) -> Int {
-        characterModels.first(where: { $0.name == characterName })?.uid ?? -1
     }
 }

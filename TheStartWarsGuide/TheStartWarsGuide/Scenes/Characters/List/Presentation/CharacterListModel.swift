@@ -8,14 +8,16 @@
 import Foundation
 
 struct CharacterListModel: Identifiable {
-    let uid: Int
+    let uid: String
     let id: UUID
     let name: String
+    let url: String
     
     init(from dto: CharacterOfListDTO) {
-        self.uid = Int(dto.uid) ?? -1
+        self.uid = dto.uid
         self.id = .init()
         self.name = dto.name
+        self.url = dto.url
     }
 }
 

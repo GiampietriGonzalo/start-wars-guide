@@ -7,16 +7,24 @@
 
 import Foundation
 
-struct CharacterDetailRepository: CharacterDetailRepositoryProtocol {
+final class CharacterDetailRepository: CharacterDetailRepositoryProtocol {
     private let networkingClient: NetworkingClientProtocol
     
     init(networkingClient: NetworkingClientProtocol) {
         self.networkingClient = networkingClient
     }
-   
-    func fetchPlanetInformation(from url: String) async throws -> PlanetModel {
+    
+    func fetchCharacterDetail(with url: String) async throws -> CharacterDetailDTO {
         guard let url = URL(string: url) else {
-            throw CustomError.invalidUrl
+            throw CustomError.invalidUrl(url)
+        }
+        
+        return try await networkingClient.fetch(from: url)
+    }
+   
+    func fetchPlanetInformation(from url: String) async throws -> PlanetDTO {
+        guard let url = URL(string: url) else {
+            throw CustomError.invalidUrl(url)
         }
         
         return try await networkingClient.fetch(from: url)
@@ -24,7 +32,7 @@ struct CharacterDetailRepository: CharacterDetailRepositoryProtocol {
     
     func fetchVehicle(from url: String) async throws -> VehicleModel {
         guard let url = URL(string: url) else {
-            throw CustomError.invalidUrl
+            throw CustomError.invalidUrl(url)
         }
         
         return try await networkingClient.fetch(from: url)
@@ -32,7 +40,7 @@ struct CharacterDetailRepository: CharacterDetailRepositoryProtocol {
     
     func fetchFilm(from url: String) async throws -> FilmModel {
         guard let url = URL(string: url) else {
-            throw CustomError.invalidUrl
+            throw CustomError.invalidUrl(url)
         }
         
         return try await networkingClient.fetch(from: url)

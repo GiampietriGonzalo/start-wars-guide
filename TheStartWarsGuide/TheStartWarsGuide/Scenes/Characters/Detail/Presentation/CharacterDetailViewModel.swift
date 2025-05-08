@@ -10,19 +10,23 @@ import Foundation
 
 @Observable
 final class CharacterDetailViewModel: CharacterDetailViewModelProtocol {
+    private let fetchCharacterDetailUseCase: FetchCharacterDetailUseCaseProtocol
     private let fetchPlanetInformationUseCase: FetchPlanetInformationUseCaseProtocol
     private let fetchVehiclesUseCase: FetchVehiclesUseCaseProtocol
     private let fetchFilmsUseCase: FetchFilmsUseCaseProtocol
     
-    @ObservationIgnored var characterModel: CharacterModel
+    @ObservationIgnored var characterModel: CharacterModel?
+    @ObservationIgnored var characterUrl: String
     var viewData: CharacterDetailViewData = .empty
     var isLoading = false
     
-    init(characterModel: CharacterModel,
+    init(characterUrl: String,
+         fetchCharacterDetailUseCase: FetchCharacterDetailUseCaseProtocol,
          fetchPlanetInformationUseCase: FetchPlanetInformationUseCaseProtocol,
          fetchVehiclesUseCase: FetchVehiclesUseCaseProtocol,
          fetchFilmsUseCase: FetchFilmsUseCaseProtocol) {
-        self.characterModel = characterModel
+        self.characterUrl = characterUrl
+        self.fetchCharacterDetailUseCase = fetchCharacterDetailUseCase
         self.fetchPlanetInformationUseCase = fetchPlanetInformationUseCase
         self.fetchVehiclesUseCase = fetchVehiclesUseCase
         self.fetchFilmsUseCase = fetchFilmsUseCase
@@ -31,6 +35,12 @@ final class CharacterDetailViewModel: CharacterDetailViewModelProtocol {
     func loadContent() async {
         isLoading = true
         do {
+            characterModel = try await fetchCharacterDetailUseCase.execute(with: characterUrl)
+            guard let characterModel, !characterUrl.isEmpty else {
+                // TODO: Display error message
+                return
+            }
+            
             async let planetInformation = fetchPlanetInformationUseCase.execute(with: characterModel.homeworld)
             async let vehicles = fetchVehiclesUseCase.execute(with: characterModel.vehicles)
             async let starships = fetchVehiclesUseCase.execute(with: characterModel.starships)
@@ -43,9 +53,14 @@ final class CharacterDetailViewModel: CharacterDetailViewModelProtocol {
             let filmsSection = getFilmInformationSection(from: try await films, title: CharacterDetailConstants.filmsSectionTitle)
             let carrouselSections = [vehiclesSection, starshipsSection, filmsSection].filter{ !$0.items.isEmpty }
             
+            var listSections = [homeworldSection]
+            if let characterInformationSection {
+                listSections.insert(characterInformationSection, at: 0)
+            }
+            
             self.viewData = .init(title: characterModel.name,
                                   characterName: characterModel.name,
-                                  listSections: [characterInformationSection, homeworldSection],
+                                  listSections: listSections,
                                   carrouselSections: carrouselSections)
             isLoading = false
         } catch let error as CustomError {
@@ -54,12 +69,12 @@ final class CharacterDetailViewModel: CharacterDetailViewModelProtocol {
             case .networkError, .serviceError:
                 //TODO: "Display a Feedback view specifing for the error and a retry button
                 debugPrint("Network or service error")
-            case .decodeError:
+            case .decodeError(let endpoint):
                 //TODO: Display a Feedack view with an unespected error message and a retry button
-                debugPrint("Decode error: please check the DTO body and compare it with the service response")
-            case .invalidUrl:
+                debugPrint("Decode error | endpoint:", endpoint)
+            case .invalidUrl(let endpoint):
                 //TODO: Display a Feedack view with an unespected error message
-                debugPrint("Invalid url: please check the url of the request")
+                debugPrint("Invalid url:", endpoint)
             case .unknown:
                 //TODO: Display a Feedack view with an unespected error message
                 debugPrint("Unknown error")
@@ -75,7 +90,8 @@ final class CharacterDetailViewModel: CharacterDetailViewModelProtocol {
 
 private extension CharacterDetailViewModel {
     
-    func getCharacterInformationSection() -> SectionViewData {
+    func getCharacterInformationSection() -> SectionViewData? {
+        guard let characterModel else { return nil }
         let characterName = SectionItemViewData(title: CharacterDetailConstants.CharacterDetail.name, description: characterModel.name, image: "person.text.rectangle")
         let characterHeight = SectionItemViewData(title: CharacterDetailConstants.CharacterDetail.height, description: characterModel.height, image: "ruler")
         let characterMass = SectionItemViewData(title: CharacterDetailConstants.CharacterDetail.mass, description: characterModel.mass, image: "scalemass")

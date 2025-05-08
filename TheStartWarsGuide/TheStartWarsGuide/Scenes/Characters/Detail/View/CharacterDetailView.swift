@@ -91,7 +91,7 @@ fileprivate struct CharacterDetailBodyView: View {
 
 #Preview {
     NavigationStack {
-        CharactersSceneBuilder.shared.buildCharacterDetailView(for: .mock)
+        CharactersSceneBuilder.shared.buildCharacterDetailView(for: "https://www.swapi.tech/api/people/1")
     }
     .navigationTitle("")
     .preferredColorScheme(.dark)

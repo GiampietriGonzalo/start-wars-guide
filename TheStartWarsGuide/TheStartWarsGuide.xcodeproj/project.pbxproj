@@ -76,8 +76,10 @@
 		7AF99BE52B80FE24004E9DB7 /* SectionItemViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF99BE42B80FE24004E9DB7 /* SectionItemViewData.swift */; };
 		7AFB0CA12B844CE800F4F9D0 /* CharacterListRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFB0CA02B844CE800F4F9D0 /* CharacterListRepositoryTests.swift */; };
 		7AFB0CA42B844E5400F4F9D0 /* NetworkClientMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFB0CA32B844E5400F4F9D0 /* NetworkClientMock.swift */; };
-		7AFB0CA62B84517700F4F9D0 /* CharacterDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFB0CA52B84517700F4F9D0 /* CharacterDTO.swift */; };
+		7AFB0CA62B84517700F4F9D0 /* CharacterDetailDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFB0CA52B84517700F4F9D0 /* CharacterDetailDTO.swift */; };
 		7F18D7D12DCC0740007FA84C /* CharacterListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F18D7D02DCC0740007FA84C /* CharacterListModel.swift */; };
+		7F18D7D32DCC33B6007FA84C /* FetchCharacterDetailUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F18D7D22DCC33B6007FA84C /* FetchCharacterDetailUseCase.swift */; };
+		7F18D7D52DCC33D2007FA84C /* FetchCharacterDetailUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F18D7D42DCC33D2007FA84C /* FetchCharacterDetailUseCaseProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -163,8 +165,10 @@
 		7AF99BE42B80FE24004E9DB7 /* SectionItemViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionItemViewData.swift; sourceTree = "<group>"; };
 		7AFB0CA02B844CE800F4F9D0 /* CharacterListRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListRepositoryTests.swift; sourceTree = "<group>"; };
 		7AFB0CA32B844E5400F4F9D0 /* NetworkClientMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClientMock.swift; sourceTree = "<group>"; };
-		7AFB0CA52B84517700F4F9D0 /* CharacterDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDTO.swift; sourceTree = "<group>"; };
+		7AFB0CA52B84517700F4F9D0 /* CharacterDetailDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailDTO.swift; sourceTree = "<group>"; };
 		7F18D7D02DCC0740007FA84C /* CharacterListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListModel.swift; sourceTree = "<group>"; };
+		7F18D7D22DCC33B6007FA84C /* FetchCharacterDetailUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchCharacterDetailUseCase.swift; sourceTree = "<group>"; };
+		7F18D7D42DCC33D2007FA84C /* FetchCharacterDetailUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchCharacterDetailUseCaseProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -382,7 +386,7 @@
 				7A01FB4D2B76B4C900A813A5 /* CharacterListRepositoryProtocol.swift */,
 				7A01FB4F2B76B4D000A813A5 /* CharacterListRepository.swift */,
 				7A01FB532B76F3AE00A813A5 /* CharacterListDTO.swift */,
-				7AFB0CA52B84517700F4F9D0 /* CharacterDTO.swift */,
+				7AFB0CA52B84517700F4F9D0 /* CharacterDetailDTO.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -415,9 +419,11 @@
 				7A50C8042B7D3BBC003B7A64 /* FetchPlanetInformationUseCaseProtocol.swift */,
 				7A50C8082B7D3D77003B7A64 /* FetchVehiclesUseCaseProtocol.swift */,
 				7A50C8142B7D4314003B7A64 /* FetchFilmsUseCaseProtocol.swift */,
+				7F18D7D42DCC33D2007FA84C /* FetchCharacterDetailUseCaseProtocol.swift */,
 				7A50C8162B7D43E9003B7A64 /* FetchPlanetInformationUseCase.swift */,
 				7A50C81F2B7D4AE2003B7A64 /* FetchVehiclesUseCase.swift */,
 				7A50C8212B7D86D7003B7A64 /* FetchFilmsUseCase.swift */,
+				7F18D7D22DCC33B6007FA84C /* FetchCharacterDetailUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -710,6 +716,7 @@
 				7F18D7D12DCC0740007FA84C /* CharacterListModel.swift in Sources */,
 				7AF99BE52B80FE24004E9DB7 /* SectionItemViewData.swift in Sources */,
 				7A50C8392B7F921D003B7A64 /* ImageConstant.swift in Sources */,
+				7F18D7D32DCC33B6007FA84C /* FetchCharacterDetailUseCase.swift in Sources */,
 				7A01FB702B7AFE7500A813A5 /* CoordinatorProtocol.swift in Sources */,
 				7A50C80F2B7D3E5A003B7A64 /* PlanetModel.swift in Sources */,
 				7A01FB4C2B76B33E00A813A5 /* FetchAllCharactersUseCase.swift in Sources */,
@@ -717,6 +724,7 @@
 				7A0538E22B82B2250026BF11 /* TheStartWarsGuideApp.swift in Sources */,
 				7A50C8342B7F8E13003B7A64 /* VerticalSectionsView.swift in Sources */,
 				7A50C8132B7D42AC003B7A64 /* FilmModel.swift in Sources */,
+				7F18D7D52DCC33D2007FA84C /* FetchCharacterDetailUseCaseProtocol.swift in Sources */,
 				7A50C82E2B7E4F54003B7A64 /* CharactersSceneBuilderProtocol.swift in Sources */,
 				7A50C8052B7D3BBC003B7A64 /* FetchPlanetInformationUseCaseProtocol.swift in Sources */,
 				7A50C8172B7D43E9003B7A64 /* FetchPlanetInformationUseCase.swift in Sources */,
@@ -727,7 +735,7 @@
 				7A50C8152B7D4314003B7A64 /* FetchFilmsUseCaseProtocol.swift in Sources */,
 				7A01FB502B76B4D000A813A5 /* CharacterListRepository.swift in Sources */,
 				7A50C8032B7D3129003B7A64 /* CharacterDetailViewModel.swift in Sources */,
-				7AFB0CA62B84517700F4F9D0 /* CharacterDTO.swift in Sources */,
+				7AFB0CA62B84517700F4F9D0 /* CharacterDetailDTO.swift in Sources */,
 				7A01FB572B76F6B300A813A5 /* CharacterListConstants.swift in Sources */,
 				7A01FB442B766D3800A813A5 /* CellWithImage.swift in Sources */,
 			);

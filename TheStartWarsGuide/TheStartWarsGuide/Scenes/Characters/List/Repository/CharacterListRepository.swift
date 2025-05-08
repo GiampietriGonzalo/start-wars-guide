@@ -18,8 +18,9 @@ struct CharacterListRepository: CharacterListRepositoryProtocol {
     }
     
     func fetch(pageNumber: Int = 1, limit: Int = 10) async throws -> CharacterListDTO {
-        guard let url = URL(string: url + String(pageNumber) + "&limit=\(limit)") else {
-            throw CustomError.invalidUrl
+        let stringUrl = url + String(pageNumber) + "&limit=\(limit)"
+        guard let url = URL(string: stringUrl) else {
+            throw CustomError.invalidUrl(stringUrl)
         }
         
         return try await networkingClient.fetch(from: url)

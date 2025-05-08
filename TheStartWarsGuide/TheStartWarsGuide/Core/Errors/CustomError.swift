@@ -6,9 +6,9 @@
 //
 
 enum CustomError: Error {
-    case invalidUrl
-    case serviceError
+    case invalidUrl(String)
+    case serviceError(String)
     case networkError
-    case decodeError
+    case decodeError(String)
     case unknown
 }

@@ -14,4 +14,5 @@ struct CharacterListDTO: Decodable {
 struct CharacterOfListDTO: Decodable {
     let uid: String
     let name: String
+    let url: String
 }

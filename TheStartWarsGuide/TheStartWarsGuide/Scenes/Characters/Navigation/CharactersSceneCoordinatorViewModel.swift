@@ -47,8 +47,8 @@ final class CharactersSceneCoordinatorViewModel: CharactersSceneCoordinatorViewM
         switch item {
         case .list:
             CharactersSceneBuilder.shared.buildListView()
-        case .detail(let character):
-            CharactersSceneBuilder.shared.buildCharacterDetailView(for: character)
+        case .detail(let characterUrl):
+            CharactersSceneBuilder.shared.buildCharacterDetailView(for: characterUrl)
         }
     }
 }

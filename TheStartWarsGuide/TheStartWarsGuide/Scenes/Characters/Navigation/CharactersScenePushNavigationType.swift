@@ -9,7 +9,7 @@ import Foundation
 
 enum CharactersScenePushNavigationType: PushNavigationType {
     case list
-    case detail(character: CharacterModel)
+    case detail(characterUrl: String)
     
     var id: UUID { UUID() }
 }
