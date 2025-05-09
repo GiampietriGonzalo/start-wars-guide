@@ -37,21 +37,17 @@ final class CharactersSceneBuilder: CharactersSceneBuilderProtocol {
     
     //MARK: Build CharterDetailView
     func buildCharacterDetailView(for characterUrl: String) -> CharacterDetailView {
-        guard var characterDetailViewModel else {
-            let repository = CharacterDetailRepository(networkingClient: networkingClient)
-            let fetchCharacterDetailUseCase = FetchCharacterDetailUseCase(repository: repository)
-            let fetchPlanetInformationUsecase = FetchPlanetInformationUseCase(repository: repository)
-            let fetchVehiclesUseCase = FetchVehiclesUseCase(repository: repository)
-            let fetchFilmsUseCase = FetchFilmsUseCase(repository: repository)
-            characterDetailViewModel = CharacterDetailViewModel(characterUrl: characterUrl,
-                                                                fetchCharacterDetailUseCase: fetchCharacterDetailUseCase,
-                                                                fetchPlanetInformationUseCase: fetchPlanetInformationUsecase,
-                                                                fetchVehiclesUseCase: fetchVehiclesUseCase,
-                                                                fetchFilmsUseCase: fetchFilmsUseCase)
-            return CharacterDetailView(viewModel: characterDetailViewModel!)
-        }
-    
-        return CharacterDetailView(viewModel: characterDetailViewModel)
+        let repository = CharacterDetailRepository(networkingClient: networkingClient)
+        let fetchCharacterDetailUseCase = FetchCharacterDetailUseCase(repository: repository)
+        let fetchPlanetInformationUsecase = FetchPlanetInformationUseCase(repository: repository)
+        let fetchVehiclesUseCase = FetchVehiclesUseCase(repository: repository)
+        let fetchFilmsUseCase = FetchFilmsUseCase(repository: repository)
+        characterDetailViewModel = CharacterDetailViewModel(characterUrl: characterUrl,
+                                                            fetchCharacterDetailUseCase: fetchCharacterDetailUseCase,
+                                                            fetchPlanetInformationUseCase: fetchPlanetInformationUsecase,
+                                                            fetchVehiclesUseCase: fetchVehiclesUseCase,
+                                                            fetchFilmsUseCase: fetchFilmsUseCase)
+        return CharacterDetailView(viewModel: characterDetailViewModel!)
     }
 }
 
