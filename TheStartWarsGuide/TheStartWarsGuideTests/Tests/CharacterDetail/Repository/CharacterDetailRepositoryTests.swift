@@ -25,15 +25,15 @@ final class CharacterDetailRepositoryTests: XCTestCase {
     }
 
     func test_fetch_planet_information_success() async throws {
-        let mock = PlanetModel.mock
+        let mock = PlanetDTO.mock
         networkingClientMock.dto = mock
         let result = try await sut.fetchPlanetInformation(from: "planetUrl")
         
-        XCTAssertEqual(result.name, mock.name)
-        XCTAssertEqual(result.terrain, mock.terrain)
-        XCTAssertEqual(result.climate, mock.climate)
-        XCTAssertEqual(result.gravity, mock.gravity)
-        XCTAssertEqual(result.population, mock.population)
+        XCTAssertEqual(result.result.properties.name, mock.result.properties.name)
+        XCTAssertEqual(result.result.properties.terrain, mock.result.properties.terrain)
+        XCTAssertEqual(result.result.properties.climate, mock.result.properties.climate)
+        XCTAssertEqual(result.result.properties.gravity, mock.result.properties.gravity)
+        XCTAssertEqual(result.result.properties.population, mock.result.properties.population)
     }
     
     func test_fetch_vehicle_success() async throws {

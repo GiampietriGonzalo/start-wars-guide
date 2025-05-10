@@ -21,14 +21,14 @@ final class CharactersSceneCoordinatorViewModelTests: XCTestCase {
     }
 
     func test_push() {
-        let itemToPush = CharactersScenePushNavigationType.detail(character: .mock)
+        let itemToPush = CharactersScenePushNavigationType.detail(characterUrl: "characterUrl")
         sut.push(itemToPush)
         
         XCTAssertFalse(sut.navigationPath.isEmpty)
     }
     
     func test_pop() {
-        let itemToPush = CharactersScenePushNavigationType.detail(character: .mock)
+        let itemToPush = CharactersScenePushNavigationType.detail(characterUrl: "characterUrl")
         sut.push(itemToPush)
         
         XCTAssertFalse(sut.navigationPath.isEmpty)
@@ -38,7 +38,7 @@ final class CharactersSceneCoordinatorViewModelTests: XCTestCase {
     
     func test_pop_to_root() {
         let rootItemToPush = CharactersScenePushNavigationType.list
-        let itemToPush = CharactersScenePushNavigationType.detail(character: .mock)
+        let itemToPush = CharactersScenePushNavigationType.detail(characterUrl: "characterUrl")
         sut.push(rootItemToPush)
         sut.push(itemToPush)
         

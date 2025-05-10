@@ -24,14 +24,14 @@ final class FetchPlanetInformationUseCaseTests: XCTestCase {
     }
 
     func test_execute_success() async throws {
-        let mock = PlanetModel.mock
-        repositoryMock.planetModel = mock
+        let mock = PlanetDTO.mock
+        repositoryMock.planetDTO = mock
         let result = try await sut.execute(with: "planetUrl")
         
-        XCTAssertEqual(result.name, mock.name)
-        XCTAssertEqual(result.terrain, mock.terrain)
-        XCTAssertEqual(result.climate, mock.climate)
-        XCTAssertEqual(result.gravity, mock.gravity)
-        XCTAssertEqual(result.population, mock.population)
+        XCTAssertEqual(result.name, mock.result.properties.name)
+        XCTAssertEqual(result.terrain, mock.result.properties.terrain)
+        XCTAssertEqual(result.climate, mock.result.properties.climate)
+        XCTAssertEqual(result.gravity, mock.result.properties.gravity)
+        XCTAssertEqual(result.population, mock.result.properties.population)
     }
 }

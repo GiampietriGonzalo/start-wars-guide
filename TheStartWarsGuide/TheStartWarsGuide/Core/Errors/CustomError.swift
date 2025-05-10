@@ -5,7 +5,7 @@
 //  Created by Gonzalo Giampietri
 //
 
-enum CustomError: Error {
+enum CustomError: Error, Equatable {
     case invalidUrl(String)
     case serviceError(String)
     case networkError(String)

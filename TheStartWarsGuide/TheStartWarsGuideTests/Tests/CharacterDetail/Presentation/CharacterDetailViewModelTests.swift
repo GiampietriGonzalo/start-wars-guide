@@ -18,8 +18,10 @@ final class CharacterDetailViewModelTests: XCTestCase {
         let fetchPlanetInformationUseCase = FetchPlanetInformationUseCase(repository: repositoryMock)
         let fetchVehiclesUseCase = FetchVehiclesUseCase(repository: repositoryMock)
         let fetchFilmsUseCase = FetchFilmsUseCase(repository: repositoryMock)
+        let fetchCharacterDetailUseCase = FetchCharacterDetailUseCase(repository: repositoryMock)
         
-        sut = CharacterDetailViewModel(characterModel: .mock,
+        sut = CharacterDetailViewModel(characterUrl: "characterUrl",
+                                       fetchCharacterDetailUseCase: fetchCharacterDetailUseCase,
                                        fetchPlanetInformationUseCase: fetchPlanetInformationUseCase,
                                        fetchVehiclesUseCase: fetchVehiclesUseCase,
                                        fetchFilmsUseCase: fetchFilmsUseCase)
@@ -31,11 +33,12 @@ final class CharacterDetailViewModelTests: XCTestCase {
     }
 
     func test_loadContent() async {
-        let characterMock = CharacterModel.mock
-        repositoryMock.planetModel = .mock
+        let characterMock = CharacterDTO.mock
+        repositoryMock.characterDetailDTO = .init(result: .init(properties: characterMock))
+        repositoryMock.planetDTO = .mock
         repositoryMock.vehicleModel = .mock
         repositoryMock.filmModel = .mock
-        sut.characterModel = characterMock
+        sut.characterModel = CharacterModel.mock
         await sut.loadContent()
         
         XCTAssertFalse(sut.isLoading)
@@ -46,7 +49,7 @@ final class CharacterDetailViewModelTests: XCTestCase {
     }
     
     func test_loadContent_error_service() async {
-        repositoryMock.error = .serviceError
+        repositoryMock.error = .serviceError("url")
         await sut.loadContent()
         
         XCTAssertFalse(sut.isLoading)
@@ -55,7 +58,7 @@ final class CharacterDetailViewModelTests: XCTestCase {
     }
     
     func test_loadContent_error_decode() async {
-        repositoryMock.error = .decodeError
+        repositoryMock.error = .decodeError("url")
         await sut.loadContent()
         
         XCTAssertFalse(sut.isLoading)
@@ -64,7 +67,7 @@ final class CharacterDetailViewModelTests: XCTestCase {
     }
     
     func test_loadContent_error_invalid_url() async {
-        repositoryMock.error = .invalidUrl
+        repositoryMock.error = .invalidUrl("url")
         await sut.loadContent()
         
         XCTAssertFalse(sut.isLoading)

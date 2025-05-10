@@ -56,12 +56,13 @@ final class FetchVehiclesUseCaseTests: XCTestCase {
     }
     
     func test_execute_error() async {
-        repositoryMock.error = .networkError
+        repositoryMock.error = .networkError("vehicleUrl")
+        
         do {
             _ = try await sut.execute(with: ["vehicleUrl"])
             XCTFail()
         } catch let error as CustomError {
-            XCTAssertEqual(error, .networkError)
+            XCTAssertEqual(error, .networkError("vehicleUrl"))
         } catch {
             XCTFail("The error should be a CustomError type")
         }

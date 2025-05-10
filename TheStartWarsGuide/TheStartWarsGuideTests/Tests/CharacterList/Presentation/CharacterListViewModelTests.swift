@@ -15,7 +15,8 @@ final class CharacterListViewModelTests: XCTestCase {
     
     override func setUpWithError() throws {
         repositoryMock = CharacterListRepositoryMock()
-        let fetchAllCharactersUseCase = FetchAllCharactersUseCase(repository: repositoryMock)
+        let fetchAllCharactersUseCase = FetchAllCharactersUseCase(repository: repositoryMock,
+                                                                  charactersPerPage: 10)
         sut = CharacterListViewModel(fetchAllCharactersUseCase: fetchAllCharactersUseCase)
     }
     
@@ -36,7 +37,7 @@ final class CharacterListViewModelTests: XCTestCase {
     }
     
     func test_loadContent_error_service() async {
-        repositoryMock.error = .serviceError
+        repositoryMock.error = .serviceError("url")
         await sut.loadContent()
         
         XCTAssertFalse(sut.isLoading)
@@ -44,7 +45,7 @@ final class CharacterListViewModelTests: XCTestCase {
     }
     
     func test_loadContent_error_decode() async {
-        repositoryMock.error = .decodeError
+        repositoryMock.error = .decodeError("url")
         await sut.loadContent()
         
         XCTAssertFalse(sut.isLoading)
@@ -52,7 +53,7 @@ final class CharacterListViewModelTests: XCTestCase {
     }
     
     func test_loadContent_error_invalid_url() async {
-        repositoryMock.error = .invalidUrl
+        repositoryMock.error = .invalidUrl("url")
         await sut.loadContent()
         
         XCTAssertFalse(sut.isLoading)

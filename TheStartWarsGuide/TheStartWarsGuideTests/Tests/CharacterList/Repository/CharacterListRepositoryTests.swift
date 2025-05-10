@@ -29,7 +29,7 @@ final class CharacterListRepositoryTests: XCTestCase {
         networkingClientMock.dto = mock
         let result = try await sut.fetch()
 
-        XCTAssertEqual(result.count, mock.count)
+        XCTAssertEqual(result.totalPages, mock.totalPages)
         XCTAssertEqual(result.results.count, mock.results.count)
         if result.results.count == mock.results.count {
             for i in 0..<result.results.count {
@@ -40,7 +40,7 @@ final class CharacterListRepositoryTests: XCTestCase {
     
     func test_fetch_failure_network() async {
         var result: CharacterListDTO?
-        networkingClientMock.error = .networkError
+        networkingClientMock.error = .networkError("url")
 
         do {
             result = try await sut.fetch()

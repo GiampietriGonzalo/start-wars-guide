@@ -15,7 +15,7 @@ final class FetchAllCharactersUseCaseTests: XCTestCase {
 
     override func setUpWithError() throws {
         repositoryMock = CharacterListRepositoryMock()
-        sut = FetchAllCharactersUseCase(repository: repositoryMock)
+        sut = FetchAllCharactersUseCase(repository: repositoryMock, charactersPerPage: 10)
     }
 
     override func tearDownWithError() throws {
@@ -28,16 +28,17 @@ final class FetchAllCharactersUseCaseTests: XCTestCase {
         repositoryMock.dto = mock
         
         let result = try await sut.execute()
-        let pages = mock.count / mock.results.count
-        let modulo = mock.count % mock.results.count
-        let totalCalls = modulo == .zero ? pages : pages + 1
-        let modelsCount = (totalCalls * mock.results.count) + modulo
+        let pages = mock.totalPages
+        let totalCalls = mock.totalRecords / mock.totalPages
+        let modelsCount = (totalCalls * mock.results.count)
         
         XCTAssertEqual(result.count, modelsCount)
     }
     
     func test_execute_success_single_page() async throws {
-        let mock = CharacterListDTO(count: 1, results: [.mock])
+        let mock = CharacterListDTO(totalRecords: 10,
+                                    totalPages: 1,
+                                    results: [.init(uid: "1", name: "name", url: "characterUrl")])
         repositoryMock.dto = mock
         let result = try await sut.execute()
         
@@ -46,7 +47,9 @@ final class FetchAllCharactersUseCaseTests: XCTestCase {
     }
     
     func test_execute_empty() async throws {
-        let mock = CharacterListDTO(count: 0, results: [])
+        let mock = CharacterListDTO(totalRecords: 0,
+                                    totalPages: 0,
+                                    results: [])
         repositoryMock.dto = mock
         let result = try await sut.execute()
         

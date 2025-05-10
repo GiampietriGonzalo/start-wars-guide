@@ -9,14 +9,21 @@
 
 final class CharacterDetailRepositoryMock: CharacterDetailRepositoryProtocol {
     
-    var planetModel: PlanetModel?
+
+    var characterDetailDTO: CharacterDetailDTO?
+    var planetDTO: PlanetDTO?
     var vehicleModel: VehicleModel?
     var filmModel: FilmModel?
     var error: CustomError = .unknown
     
-    func fetchPlanetInformation(from url: String) async throws -> PlanetModel {
-        guard let planetModel else { throw error }
-        return planetModel
+    func fetchCharacterDetail(with url: String) async throws -> CharacterDetailDTO {
+        guard let characterDetailDTO else { throw error }
+        return characterDetailDTO
+    }
+    
+    func fetchPlanetInformation(from url: String) async throws -> PlanetDTO {
+        guard let planetDTO else { throw error }
+        return planetDTO
     }
     
     func fetchVehicle(from url: String) async throws -> VehicleModel {
