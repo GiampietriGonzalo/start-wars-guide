@@ -54,7 +54,6 @@ fileprivate struct CharacterListBodyView<Coordinator: CharactersSceneCoordinator
         .listRowSeparator(.hidden)
         .scrollIndicators(.hidden)
         .listRowSpacing(8)
-        .refreshable { await viewModel.loadContent() }
     }
 }
 

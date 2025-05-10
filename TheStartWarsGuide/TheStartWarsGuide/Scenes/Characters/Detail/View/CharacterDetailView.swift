@@ -21,16 +21,12 @@ struct CharacterDetailView: View {
                                            screenTitle: $screenTitle,
                                            backgroundColor: $backgroundColor)
             } else {
-                CharacterDetailBodyView(viewModel: viewModel)
+                CharacterDetailBodyView(title: screenTitle, viewModel: viewModel)
             }
         }
-        .navigationTitle(screenTitle)
         .ignoresSafeArea(.all, edges: .bottom)
         .background(backgroundColor)
         .scrollIndicators(.hidden)
-        .refreshable {
-            await viewModel.loadContent()
-        }
         .task {
             await viewModel.loadContent()
         }
@@ -64,19 +60,28 @@ fileprivate struct CharacterDetailLoadingView : View {
 }
 
 fileprivate struct CharacterDetailBodyView: View {
-    @State var viewModel: CharacterDetailViewModelProtocol
+    let title: String
+    let viewModel: CharacterDetailViewModelProtocol
     
     var body: some View {
         GeometryReader { geometry in
             ScrollView {
                 VStack {
                     CharacterDetailImageView(characterImageName: viewModel.viewData.title)
-                        .frame(height: 200)
-                        .padding(EdgeInsets(top: -16, leading: 0, bottom: -16, trailing: 0))
+                        .overlay(alignment: .bottom) {
+                            HStack {
+                                Spacer()
+                                Text(title)
+                                    .font(.largeTitle)
+                                Spacer()
+                            }
+                            .padding(.bottom, 32)
+                        }
                     
                     VerticalSectionsView(sections: viewModel.viewData.listSections)
                         .background(Color(.secondarySystemBackground))
                         .clipShape(.rect(cornerRadii: .init(topLeading: 16, bottomLeading: 8, bottomTrailing: 8, topTrailing: 16)))
+                        .padding(.top, -8)
                     
                     Spacer(minLength: 32)
                     

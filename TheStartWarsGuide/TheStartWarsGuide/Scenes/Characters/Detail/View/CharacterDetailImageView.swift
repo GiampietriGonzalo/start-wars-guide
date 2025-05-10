@@ -11,12 +11,16 @@ struct CharacterDetailImageView: View {
     let characterImageName: String
     
     var body: some View {
-        VStack {
-            Spacer()
+        ZStack() {
             Image(characterImageName)
                 .resizable()
-                .aspectRatio(contentMode: .fit)
-                .clipShape(.circle)
+                .scaledToFill()
+            
+            LinearGradient(
+                gradient: Gradient(colors: [.black.opacity(0.8), .clear]),
+                startPoint: .bottom,
+                endPoint: .top
+            )
         }
     }
 }

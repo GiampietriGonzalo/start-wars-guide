@@ -21,6 +21,7 @@ final class CharacterListViewModel: CharacterListViewModelProtocol {
     }
     
     func loadContent() async {
+        guard characters.isEmpty else { return }
         isLoading = true
         do {
             characterModels = try await fetchAllCharactersUseCase.execute()
@@ -29,9 +30,9 @@ final class CharacterListViewModel: CharacterListViewModelProtocol {
         } catch let error as CustomError {
             isLoading = false
             switch error {
-            case .networkError, .serviceError:
+            case .networkError(let endpoint), .serviceError(let endpoint):
                 //TODO: "Display a Feedback view specifing for the error and a retry button
-                debugPrint("Network or service error")
+                debugPrint("Network or service error | endpoint:", endpoint)
             case .decodeError(let endpoint):
                 //TODO: Display a Feedack view with an unespected error message and a retry button
                 debugPrint("Decode error | endpoint:", endpoint)

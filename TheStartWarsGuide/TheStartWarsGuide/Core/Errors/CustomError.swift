@@ -8,7 +8,7 @@
 enum CustomError: Error {
     case invalidUrl(String)
     case serviceError(String)
-    case networkError
+    case networkError(String)
     case decodeError(String)
     case unknown
 }

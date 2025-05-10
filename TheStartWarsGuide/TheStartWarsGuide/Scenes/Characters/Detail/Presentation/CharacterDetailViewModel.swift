@@ -66,9 +66,9 @@ final class CharacterDetailViewModel: CharacterDetailViewModelProtocol {
         } catch let error as CustomError {
             self.isLoading = false
             switch error {
-            case .networkError, .serviceError:
+            case .networkError(let endpoint), .serviceError(let endpoint):
                 //TODO: "Display a Feedback view specifing for the error and a retry button
-                debugPrint("Network or service error")
+                debugPrint("Network or service error | endpoint:", endpoint)
             case .decodeError(let endpoint):
                 //TODO: Display a Feedack view with an unespected error message and a retry button
                 debugPrint("Decode error | endpoint:", endpoint)

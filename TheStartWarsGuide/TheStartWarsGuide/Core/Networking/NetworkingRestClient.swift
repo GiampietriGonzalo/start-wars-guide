@@ -38,7 +38,7 @@ final class NetworkingRestClient: NetworkingClientProtocol {
         } catch _ as DecodingError {
             throw CustomError.decodeError(url.absoluteString)
         } catch {
-            throw CustomError.networkError
+            throw CustomError.networkError(url.absoluteString)
         }
         
         return dto
